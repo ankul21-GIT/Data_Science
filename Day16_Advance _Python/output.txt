@@ -1,0 +1,2 @@
+Hello from the decorated function!
+This file was safely opened and closed.
