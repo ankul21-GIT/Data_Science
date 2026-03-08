@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Example CSS (adjust paths as needed) -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<div class="container-contact100">
+
+    <div class="wrap-contact100">
+        <span class="contact100-form-symbol">
+            <img src="{{ url_for('static', filename='IMG/icons/symbol-01.png') }}" alt="SYMBOL-MAIL">
+        </span>
+
+        <form class="contact100-form validate-form flex-sb flex-w" action="{{ url_for('contact') }}" method="post">
+            <span class="contact100-form-title">
+                Drop Us A Message
+            </span>
+
+            <div class="wrap-input100 rs1 validate-input" data-validate="Name is required">
+                <input class="input100" type="text" name="name" placeholder="Name" required>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 rs1 validate-input" data-validate="Valid email is required: ex@a.z">
+                <input class="input100" type="email" name="email" placeholder="Email Address" required>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Subject is required">
+                <input class="input100" type="text" name="subject" placeholder="Subject" required>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Message is required">
+                <textarea class="input100" name="message" placeholder="Your Message" required></textarea>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn" type="submit">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Example JS (adjust paths as needed) -->
+<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
