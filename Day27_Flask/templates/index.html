@@ -1,0 +1,53 @@
+{% extends"base.html"%}
+
+{% block style %}
+
+{% endblock %}
+
+
+{% block content  %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in all_users %}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{user.username}}</td>
+      <td>{{user.password}}</td>
+      <td>
+        <a href="/update", class='btn btn-primary'>Update</a>
+      </td>
+      <td>@mdo</td>
+    </tr>
+    {% endfor %}
+    
+      
+  </tbody>
+</table>
+{% endblock %}
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello {{name}}</h1>
+    {% for n in name %}
+        {% if not n =="l" %}
+        <h2>{{n}}</h2>
+        {% endif %}
+    {%endfor%}
+</body>
+</html> -->
