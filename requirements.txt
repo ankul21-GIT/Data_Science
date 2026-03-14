@@ -23,6 +23,5 @@ jinja2
 pymongo
 pydantic
 pymongo
-pydantic[email]
 
 
