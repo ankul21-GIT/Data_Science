@@ -23,5 +23,6 @@ jinja2
 pymongo
 pydantic
 pymongo
-
+statsmodels
+scipy
 
