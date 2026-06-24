@@ -20,3 +20,9 @@ CREATE TABLE table_name (
 INSERT INTO table_name (column1, column2, ...)
 VALUES (value1, value2, ...);
 
+-- Q4. How do you retrieve all the columns from a table?
+-- Answer:
+SELECT * FROM table_name;
+
+
+
