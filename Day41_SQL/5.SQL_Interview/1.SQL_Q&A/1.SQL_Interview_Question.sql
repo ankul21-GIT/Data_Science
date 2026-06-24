@@ -15,3 +15,8 @@ CREATE TABLE table_name (
     ...
 );
 
+-- Q3. How do you insert values into a table?
+-- Answer:
+INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+
