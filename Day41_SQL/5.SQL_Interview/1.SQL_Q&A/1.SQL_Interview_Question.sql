@@ -24,5 +24,10 @@ VALUES (value1, value2, ...);
 -- Answer:
 SELECT * FROM table_name;
 
+-- Q5. How can you retrieve specific columns from a table?
+-- Answer:
+SELECT column1, column2 
+FROM table_name;
+
 
 
