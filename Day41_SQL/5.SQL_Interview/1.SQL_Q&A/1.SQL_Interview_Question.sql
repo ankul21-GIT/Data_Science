@@ -41,4 +41,9 @@ FROM table_name;
 SELECT * FROM table_name WHERE age > 25;
 
 
+-- Q8. What are the different types of SQL JOINs?
+-- Answer : INNER JOIN, LEFT (or LEFT OUTER) JOIN, RIGHT (or RIGHT OUTER) JOIN, and FULL (or FULL OUTER) JOIN.
+
+
+
 
