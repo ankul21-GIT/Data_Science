@@ -15,6 +15,7 @@ CREATE TABLE table_name (
     ...
 );
 
+
 -- Q3. How do you insert values into a table?
 -- Answer:
 INSERT INTO table_name (column1, column2, ...)
@@ -24,13 +25,20 @@ VALUES (value1, value2, ...);
 -- Answer:
 SELECT * FROM table_name;
 
+
 -- Q5. How can you retrieve specific columns from a table?
 -- Answer:
 SELECT column1, column2 
 FROM table_name;
 
+
 -- Q6. What is the use of the WHERE clause?
 -- Answer : To filter records based on specific conditions.
+
+
+-- Q7. How would you fetch data from a table where the age is greater than 25?
+-- Answer:
+SELECT * FROM table_name WHERE age > 25;
 
 
 
