@@ -29,5 +29,8 @@ SELECT * FROM table_name;
 SELECT column1, column2 
 FROM table_name;
 
+-- Q6. What is the use of the WHERE clause?
+-- Answer : To filter records based on specific conditions.
+
 
 
