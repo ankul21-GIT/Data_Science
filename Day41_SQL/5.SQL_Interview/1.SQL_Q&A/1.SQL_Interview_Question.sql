@@ -45,5 +45,12 @@ SELECT * FROM table_name WHERE age > 25;
 -- Answer : INNER JOIN, LEFT (or LEFT OUTER) JOIN, RIGHT (or RIGHT OUTER) JOIN, and FULL (or FULL OUTER) JOIN.
 
 
+-- Q9. Write a SQL query to join two tables: `students` and `courses`, assuming each student is enrolled in a course and they share a common column `course_id`.
+-- Answer:
+SELECT * FROM students 
+INNER JOIN courses 
+ON students.course_id = courses.course_id;
+
+
 
 
