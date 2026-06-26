@@ -52,5 +52,9 @@ INNER JOIN courses
 ON students.course_id = courses.course_id;
 
 
+-- Q10. What is the difference between the `HAVING` clause and the `WHERE` clause?
+-- Answer : `WHERE` filters records before aggregating in `GROUP BY`, whereas `HAVING` filters after aggregation.
+
+
 
 
