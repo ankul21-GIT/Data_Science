@@ -56,5 +56,17 @@ ON students.course_id = courses.course_id;
 -- Answer : `WHERE` filters records before aggregating in `GROUP BY`, whereas `HAVING` filters after aggregation.
 
 
+-- Q11. How would you list the number of students enrolled in each course, but only display courses with more than 5 students?
+-- Answer:
+SELECT course_id, COUNT(student_id) as number_of_students 
+FROM enrollments 
+GROUP BY course_id 
+HAVING number_of_students > 5;
+
+
+
+
+
+
 
 
