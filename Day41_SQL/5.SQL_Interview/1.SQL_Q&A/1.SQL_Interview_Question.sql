@@ -64,6 +64,8 @@ GROUP BY course_id
 HAVING number_of_students > 5;
 
 
+-- Q12. What is the `LIKE` operator used for?
+-- Answer : To search for a specified pattern in a column.
 
 
 
