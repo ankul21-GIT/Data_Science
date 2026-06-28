@@ -68,6 +68,11 @@ HAVING number_of_students > 5;
 -- Answer : To search for a specified pattern in a column.
 
 
+-- Q13. Write a SQL query to find all students whose names start with 'A'.
+-- Answer :
+SELECT * FROM students WHERE name LIKE 'A%';
+
+
 
 
 
