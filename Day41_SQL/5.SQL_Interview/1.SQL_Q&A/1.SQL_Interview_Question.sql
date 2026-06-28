@@ -73,6 +73,12 @@ HAVING number_of_students > 5;
 SELECT * FROM students WHERE name LIKE 'A%';
 
 
+-- Q14. How would you update a record in a table?
+-- Answer :
+UPDATE table_name 
+SET column1 = value1, column2 = value2, ...
+WHERE some_column = some_value;
+
 
 
 
