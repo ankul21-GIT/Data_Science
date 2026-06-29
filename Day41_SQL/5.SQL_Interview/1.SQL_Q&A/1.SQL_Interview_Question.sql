@@ -84,5 +84,9 @@ WHERE some_column = some_value;
 -- Answer : DELETE FROM table_name WHERE condition;
 
 
+-- Q16. How do you drop a table?
+-- Answer : DROP TABLE table_name;
+
+
 
 
