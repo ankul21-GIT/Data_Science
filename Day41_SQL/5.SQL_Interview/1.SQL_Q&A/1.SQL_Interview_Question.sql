@@ -88,5 +88,8 @@ WHERE some_column = some_value;
 -- Answer : DROP TABLE table_name;
 
 
+-- Q17. What is the purpose of the `ALTER` table command?
+-- Answer : To modify an existing table structure, such as adding, deleting, or modifying columns.
+
 
 
