@@ -92,4 +92,8 @@ WHERE some_column = some_value;
 -- Answer : To modify an existing table structure, such as adding, deleting, or modifying columns.
 
 
+-- Q18. How would you add a new column `email` to the `students` table?
+-- Answer : ALTER TABLE students ADD COLUMN email VARCHAR(255);
+
+
 
