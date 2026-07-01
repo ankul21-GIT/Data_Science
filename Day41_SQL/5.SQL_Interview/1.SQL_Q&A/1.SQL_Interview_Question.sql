@@ -95,5 +95,8 @@ WHERE some_column = some_value;
 -- Q18. How would you add a new column `email` to the `students` table?
 -- Answer : ALTER TABLE students ADD COLUMN email VARCHAR(255);
 
+-- Q19. What does the `DISTINCT` keyword do in a SQL query?
+-- Answer : It removes duplicate rows from the result set.
+
 
 
