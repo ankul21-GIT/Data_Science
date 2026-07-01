@@ -99,4 +99,6 @@ WHERE some_column = some_value;
 -- Answer : It removes duplicate rows from the result set.
 
 
-
+-- Q20. Write a query to find the total number of distinct courses from the `enrollments` table.
+-- Answer :
+SELECT COUNT(DISTINCT course_id) FROM enrollments;
