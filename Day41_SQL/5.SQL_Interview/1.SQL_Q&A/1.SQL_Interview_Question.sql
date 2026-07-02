@@ -106,3 +106,12 @@ SELECT COUNT(DISTINCT course_id) FROM enrollments;
 
 -- Q21. What does the `EXISTS` operator do?
 -- Answer : It tests for the existence of any record in a subquery.
+
+
+-- Q22. Write a SQL query to find students who have enrolled in a course.
+-- Answer :
+SELECT student_id 
+FROM students 
+WHERE EXISTS (SELECT 1 FROM enrollments WHERE students.student_id = enrollments.student_id);
+
+
