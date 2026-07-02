@@ -102,3 +102,7 @@ WHERE some_column = some_value;
 -- Q20. Write a query to find the total number of distinct courses from the `enrollments` table.
 -- Answer :
 SELECT COUNT(DISTINCT course_id) FROM enrollments;
+
+
+-- Q21. What does the `EXISTS` operator do?
+-- Answer : It tests for the existence of any record in a subquery.
