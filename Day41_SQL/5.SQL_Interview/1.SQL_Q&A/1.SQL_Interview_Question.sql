@@ -115,3 +115,6 @@ FROM students
 WHERE EXISTS (SELECT 1 FROM enrollments WHERE students.student_id = enrollments.student_id);
 
 
+-- Q23. How can you concatenate columns in MySQL?
+-- Answer : Using the `CONCAT()` function.
+
