@@ -118,3 +118,8 @@ WHERE EXISTS (SELECT 1 FROM enrollments WHERE students.student_id = enrollments.
 -- Q23. How can you concatenate columns in MySQL?
 -- Answer : Using the `CONCAT()` function.
 
+
+-- Q24. Write a query to get the full name of a student, given `first_name` and `last_name` columns.
+-- Answer :
+SELECT CONCAT(first_name, ' ', last_name) as full_name FROM students;
+
