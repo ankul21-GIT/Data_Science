@@ -128,3 +128,8 @@ SELECT CONCAT(first_name, ' ', last_name) as full_name FROM students;
 -- Answer :
 SELECT COUNT(*) FROM table_name;
 
+
+-- Q26. How can you fetch the first 5 records from a table?
+-- Answer :
+SELECT * FROM table_name LIMIT 5;
+
