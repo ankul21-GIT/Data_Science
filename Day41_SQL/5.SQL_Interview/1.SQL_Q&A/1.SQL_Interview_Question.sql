@@ -123,3 +123,8 @@ WHERE EXISTS (SELECT 1 FROM enrollments WHERE students.student_id = enrollments.
 -- Answer :
 SELECT CONCAT(first_name, ' ', last_name) as full_name FROM students;
 
+
+-- Q25. How do you find the total number of rows in a table?**
+-- Answer :
+SELECT COUNT(*) FROM table_name;
+
