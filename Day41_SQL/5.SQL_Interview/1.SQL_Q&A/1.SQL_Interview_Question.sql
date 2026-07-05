@@ -137,3 +137,9 @@ SELECT * FROM table_name LIMIT 5;
 -- Q27. What is the difference between `CHAR` and `VARCHAR` data types?
 -- Answer : `CHAR` is fixed-length while `VARCHAR` is variable-length.
 
+
+-- Q28. How can you change the data type of a column?
+-- Answer :ALTER TABLE table_name MODIFY column_name NEW_DATA_TYPE;
+
+
+
