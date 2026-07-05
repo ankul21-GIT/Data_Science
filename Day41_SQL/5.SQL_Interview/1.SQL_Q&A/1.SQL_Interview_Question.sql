@@ -133,3 +133,7 @@ SELECT COUNT(*) FROM table_name;
 -- Answer :
 SELECT * FROM table_name LIMIT 5;
 
+
+-- Q27. What is the difference between `CHAR` and `VARCHAR` data types?
+-- Answer : `CHAR` is fixed-length while `VARCHAR` is variable-length.
+
