@@ -151,3 +151,7 @@ ORDER BY salary DESC
 LIMIT 1 OFFSET 2;
 
 
+-- Q30. How do you create a primary key in a table?
+-- Answer : ALTER TABLE table_name ADD PRIMARY KEY (column_name);
+
+
