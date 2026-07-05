@@ -142,4 +142,12 @@ SELECT * FROM table_name LIMIT 5;
 -- Answer :ALTER TABLE table_name MODIFY column_name NEW_DATA_TYPE;
 
 
+-- Q29. Write a SQL query to find the 3rd highest salary from a `salaries` table.
+-- Answer :
+
+SELECT DISTINCT salary 
+FROM salaries 
+ORDER BY salary DESC 
+LIMIT 1 OFFSET 2;
+
 
