@@ -159,3 +159,5 @@ LIMIT 1 OFFSET 2;
 -- Answer : A foreign key constraint establishes a link between two tables and ensures that records in one table correspond to records in another. It's used to maintain referential integrity in the database.
 
 
+-- Q32. How can you add a foreign key constraint to an existing table?
+-- Answer : ALTER TABLE table_name ADD FOREIGN KEY (column_name) REFERENCES other_table(other_column);
