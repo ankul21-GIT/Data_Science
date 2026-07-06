@@ -155,3 +155,7 @@ LIMIT 1 OFFSET 2;
 -- Answer : ALTER TABLE table_name ADD PRIMARY KEY (column_name);
 
 
+-- Q31. What is a foreign key constraint, and why is it used?
+-- Answer : A foreign key constraint establishes a link between two tables and ensures that records in one table correspond to records in another. It's used to maintain referential integrity in the database.
+
+
