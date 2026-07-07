@@ -166,3 +166,7 @@ LIMIT 1 OFFSET 2;
 -- Q33. How can you retrieve the unique values from a column?
 -- Answer :
 SELECT DISTINCT column_name FROM table_name;
+
+
+-- Q34. What is the difference between an `INNER JOIN` and a `LEFT JOIN`?
+-- Answer : An `INNER JOIN` returns rows when there is a match in both tables, while a `LEFT JOIN` returns all rows from the left table and the matched rows from the right table. If there's no match, the result is `NULL` on the right side.
