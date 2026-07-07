@@ -1,4 +1,4 @@
--- Here are 100+ MySQL interview questions with their answers, ranging from basic to more intermediate topics:
+-- Here are MySQL interview questions with their answers, ranging from basic to more intermediate topics:
 
 
 -- Q1. How do you create a new database in MySQL?
@@ -161,3 +161,8 @@ LIMIT 1 OFFSET 2;
 
 -- Q32. How can you add a foreign key constraint to an existing table?
 -- Answer : ALTER TABLE table_name ADD FOREIGN KEY (column_name) REFERENCES other_table(other_column);
+
+
+-- Q33. How can you retrieve the unique values from a column?
+-- Answer :
+SELECT DISTINCT column_name FROM table_name;
