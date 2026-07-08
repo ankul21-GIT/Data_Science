@@ -170,3 +170,8 @@ SELECT DISTINCT column_name FROM table_name;
 
 -- Q34. What is the difference between an `INNER JOIN` and a `LEFT JOIN`?
 -- Answer : An `INNER JOIN` returns rows when there is a match in both tables, while a `LEFT JOIN` returns all rows from the left table and the matched rows from the right table. If there's no match, the result is `NULL` on the right side.
+
+
+-- Q35. What is normalization, and why is it important?
+-- Answer : Normalization is the process of organizing a database to reduce redundancy and ensure data integrity. It divides larger tables into smaller ones and establishes relationships between them using foreign keys.
+
