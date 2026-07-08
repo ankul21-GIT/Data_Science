@@ -175,3 +175,9 @@ SELECT DISTINCT column_name FROM table_name;
 -- Q35. What is normalization, and why is it important?
 -- Answer : Normalization is the process of organizing a database to reduce redundancy and ensure data integrity. It divides larger tables into smaller ones and establishes relationships between them using foreign keys.
 
+
+-- Q36. Describe 1NF, 2NF, and 3NF in database normalization.
+-- Answer : 
+--      - 1NF (First Normal Form):** Each table has a primary key, and all attributes are atomic (no repeating groups or arrays).
+--      - 2NF (Second Normal Form):** All non-key attributes are fully functionally dependent on the primary key.
+--      - 3NF (Third Normal Form):** All attributes are functionally dependent only on the primary key.
