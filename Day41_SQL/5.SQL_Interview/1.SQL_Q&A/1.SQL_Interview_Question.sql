@@ -181,3 +181,8 @@ SELECT DISTINCT column_name FROM table_name;
 --      - 1NF (First Normal Form):** Each table has a primary key, and all attributes are atomic (no repeating groups or arrays).
 --      - 2NF (Second Normal Form):** All non-key attributes are fully functionally dependent on the primary key.
 --      - 3NF (Third Normal Form):** All attributes are functionally dependent only on the primary key.
+
+
+-- Q37. What is a subquery, and how is it different from a JOIN?
+-- Answer : A subquery is a query nested inside another query. A subquery can return data that will be used in the main query as a condition. A JOIN is used to combine rows from two or more tables based on a related column.
+
