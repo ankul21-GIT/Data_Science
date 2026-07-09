@@ -186,3 +186,9 @@ SELECT DISTINCT column_name FROM table_name;
 -- Q37. What is a subquery, and how is it different from a JOIN?
 -- Answer : A subquery is a query nested inside another query. A subquery can return data that will be used in the main query as a condition. A JOIN is used to combine rows from two or more tables based on a related column.
 
+
+-- Q38. Write a query to find employees whose salary is above the average salary.
+-- Answer :
+SELECT employee_name, salary 
+FROM employees 
+WHERE salary > (SELECT AVG(salary) FROM employees);
