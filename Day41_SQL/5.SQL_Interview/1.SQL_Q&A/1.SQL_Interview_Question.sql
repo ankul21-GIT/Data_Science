@@ -192,3 +192,7 @@ SELECT DISTINCT column_name FROM table_name;
 SELECT employee_name, salary 
 FROM employees 
 WHERE salary > (SELECT AVG(salary) FROM employees);
+
+
+-- Q39. What is a stored procedure in MySQL?
+-- Answer : A stored procedure is a precompiled group of SQL statements stored in the database. It can be invoked as needed.
