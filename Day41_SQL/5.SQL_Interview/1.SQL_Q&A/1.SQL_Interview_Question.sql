@@ -196,3 +196,9 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 
 -- Q39. What is a stored procedure in MySQL?
 -- Answer : A stored procedure is a precompiled group of SQL statements stored in the database. It can be invoked as needed.
+
+
+-- Q40. How can you handle errors in stored procedures?
+-- Answer : In MySQL, you can use the `DECLARE` statement to define error handlers using `CONTINUE` or `EXIT` handlers.
+
+
