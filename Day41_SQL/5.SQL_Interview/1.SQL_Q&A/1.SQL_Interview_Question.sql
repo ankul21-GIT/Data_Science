@@ -206,3 +206,6 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 -- Answer : Use parameterized queries or prepared statements, avoid constructing queries with string concatenation using external input, and always validate and sanitize user input.
 
 
+-- Q42. What are `TRIGGERS` in MySQL?
+-- Answer : Triggers are automatic actions that the database can perform when a specified change occurs (like an `INSERT`, `UPDATE`, or `DELETE` operation).
+
