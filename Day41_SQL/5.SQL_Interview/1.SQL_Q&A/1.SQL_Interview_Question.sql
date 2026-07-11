@@ -202,3 +202,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 -- Answer : In MySQL, you can use the `DECLARE` statement to define error handlers using `CONTINUE` or `EXIT` handlers.
 
 
+-- Q41. How do you prevent SQL injection in your queries?
+-- Answer : Use parameterized queries or prepared statements, avoid constructing queries with string concatenation using external input, and always validate and sanitize user input.
+
+
