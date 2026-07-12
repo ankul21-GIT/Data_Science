@@ -213,3 +213,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 -- Q43. Can you explain the difference between `CHAR_LENGTH` and `LENGTH` functions?
 -- Answer : `CHAR_LENGTH` returns the number of characters in a string, while `LENGTH` returns the number of bytes. For single-byte character sets, they return the same value.
 
+
+-- Q44. What is the purpose of the `GROUP_CONCAT` function in MySQL?
+-- Answer : `GROUP_CONCAT` returns a concatenated string of aggregated data values for each group of rows in the result set.
+
