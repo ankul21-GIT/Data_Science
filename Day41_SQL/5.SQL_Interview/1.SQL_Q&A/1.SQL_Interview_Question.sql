@@ -209,3 +209,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 -- Q42. What are `TRIGGERS` in MySQL?
 -- Answer : Triggers are automatic actions that the database can perform when a specified change occurs (like an `INSERT`, `UPDATE`, or `DELETE` operation).
 
+
+-- Q43. Can you explain the difference between `CHAR_LENGTH` and `LENGTH` functions?
+-- Answer : `CHAR_LENGTH` returns the number of characters in a string, while `LENGTH` returns the number of bytes. For single-byte character sets, they return the same value.
+
