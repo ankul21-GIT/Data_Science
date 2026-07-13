@@ -221,3 +221,8 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 -- Q45. Write a SQL query to concatenate all names from the `employees` table into a single string, separated by commas.
 -- Answer :
 SELECT GROUP_CONCAT(employee_name) FROM employees;
+
+
+-- Q46. How can you create an index in MySQL?
+-- Answer:
+-- CREATE INDEX index_name ON table_name(column_name);
