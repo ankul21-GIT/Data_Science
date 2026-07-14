@@ -226,3 +226,7 @@ SELECT GROUP_CONCAT(employee_name) FROM employees;
 -- Q46. How can you create an index in MySQL?
 -- Answer:
 -- CREATE INDEX index_name ON table_name(column_name);
+
+
+-- Q47. What is the difference between a clustered and a non-clustered index?
+-- Answer : A clustered index determines the physical order of data in a table. A table can have only one clustered index. Non-clustered indexes, on the other hand, do not determine the physical order and a table can have multiple non-clustered indexes.
