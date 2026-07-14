@@ -230,3 +230,7 @@ SELECT GROUP_CONCAT(employee_name) FROM employees;
 
 -- Q47. What is the difference between a clustered and a non-clustered index?
 -- Answer : A clustered index determines the physical order of data in a table. A table can have only one clustered index. Non-clustered indexes, on the other hand, do not determine the physical order and a table can have multiple non-clustered indexes.
+
+
+-- Q48. What are views in MySQL, and why are they used?
+-- Answer : A view is a virtual table based on the result-set of an SQL statement. They allow encapsulating complex queries, providing a simplified representation or hiding certain data.
