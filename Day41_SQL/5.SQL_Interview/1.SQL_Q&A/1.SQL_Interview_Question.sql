@@ -234,3 +234,7 @@ SELECT GROUP_CONCAT(employee_name) FROM employees;
 
 -- Q48. What are views in MySQL, and why are they used?
 -- Answer : A view is a virtual table based on the result-set of an SQL statement. They allow encapsulating complex queries, providing a simplified representation or hiding certain data.
+
+
+ -- Q49. What are transactions in MySQL?
+-- Answer : Transactions are a sequence of one or more SQL operations executed as a single unit. They ensure data integrity, following the ACID properties (Atomicity, Consistency, Isolation, Durability).
