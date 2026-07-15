@@ -238,3 +238,14 @@ SELECT GROUP_CONCAT(employee_name) FROM employees;
 
  -- Q49. What are transactions in MySQL?
 -- Answer : Transactions are a sequence of one or more SQL operations executed as a single unit. They ensure data integrity, following the ACID properties (Atomicity, Consistency, Isolation, Durability).
+
+
+-- Q50.How do you start and commit a transaction in MySQL?
+-- Answer : 
+/*
+START TRANSACTION;
+-- SQL operations
+COMMIT;
+*/
+
+
