@@ -253,3 +253,7 @@ COMMIT;
 -- Answer : `UNION` returns unique records from the combined dataset, while `UNION ALL` returns all records, including duplicates.
 
 
+-- Q52. What are the advantages of using stored procedures?
+-- Answer : They provide better performance as they are precompiled, help in modular programming, offer a security mechanism, and reduce network traffic.
+
+
