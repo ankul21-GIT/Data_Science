@@ -249,3 +249,7 @@ COMMIT;
 */
 
 
+-- Q51. What is the difference between `UNION` and `UNION ALL`?
+-- Answer : `UNION` returns unique records from the combined dataset, while `UNION ALL` returns all records, including duplicates.
+
+
