@@ -259,3 +259,8 @@ COMMIT;
 
 -- Q53. What is the difference between `DATEDIFF` and `TIMESTAMPDIFF` in MySQL?
 -- Answer : Both are used to find the difference between two dates, but `TIMESTAMPDIFF` allows for a more specific interval, like month or year, while `DATEDIFF` returns the difference in days.
+
+
+-- QQ54. How do you clone a table in MySQL?
+-- Answer :
+CREATE TABLE new_table AS SELECT * FROM existing_table;
