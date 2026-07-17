@@ -257,3 +257,5 @@ COMMIT;
 -- Answer : They provide better performance as they are precompiled, help in modular programming, offer a security mechanism, and reduce network traffic.
 
 
+-- Q53. What is the difference between `DATEDIFF` and `TIMESTAMPDIFF` in MySQL?
+-- Answer : Both are used to find the difference between two dates, but `TIMESTAMPDIFF` allows for a more specific interval, like month or year, while `DATEDIFF` returns the difference in days.
