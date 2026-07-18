@@ -272,4 +272,13 @@ SELECT employee_name, salary, RANK() OVER(ORDER BY salary DESC) AS ranking
 FROM employees;
 
 
+-- Q56. How do you remove duplicate rows in a table?
+-- Answer : One common way is to create a new table with the distinct rows and delete the original table:
+
+CREATE TABLE new_table AS SELECT DISTINCT * FROM original_table;
+DROP TABLE original_table;
+RENAME TABLE new_table TO original_table;
+
+
+
 
