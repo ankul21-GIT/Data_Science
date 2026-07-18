@@ -264,3 +264,12 @@ COMMIT;
 -- QQ54. How do you clone a table in MySQL?
 -- Answer :
 CREATE TABLE new_table AS SELECT * FROM existing_table;
+
+
+-- Q55. Write a SQL query to rank employees based on their salary in descending order.
+-- Answer :
+SELECT employee_name, salary, RANK() OVER(ORDER BY salary DESC) AS ranking 
+FROM employees;
+
+
+
