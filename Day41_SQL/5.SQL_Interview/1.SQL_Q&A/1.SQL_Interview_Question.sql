@@ -283,4 +283,10 @@ RENAME TABLE new_table TO original_table;
 -- QQ57. What are the default storage engines in MySQL?
 -- Answer : The default storage engine was MyISAM up to MySQL 5.5, but InnoDB became the default from MySQL 5.5 onward.
 
-
+ 
+-- QQ58. What is a self-join, and why would you use it?
+-- Answer : A self-join is a SQL join where a table is joined with itself. It is useful when you want to compare rows within the same table or find relationships between records in the same table.
+SELECT A.column_name, B.column_name
+FROM table_name A
+JOIN table_name B
+ON A.common_column = B.common_column;
