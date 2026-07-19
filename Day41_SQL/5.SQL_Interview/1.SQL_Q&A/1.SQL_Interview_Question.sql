@@ -280,5 +280,7 @@ DROP TABLE original_table;
 RENAME TABLE new_table TO original_table;
 
 
+-- QQ57. What are the default storage engines in MySQL?
+-- Answer : The default storage engine was MyISAM up to MySQL 5.5, but InnoDB became the default from MySQL 5.5 onward.
 
 
