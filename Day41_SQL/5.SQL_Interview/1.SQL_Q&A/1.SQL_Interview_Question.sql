@@ -290,3 +290,14 @@ SELECT A.column_name, B.column_name
 FROM table_name A
 JOIN table_name B
 ON A.common_column = B.common_column;
+
+
+-- QQ59. What is the purpose of the `SET` data type in MySQL?**
+-- Answer :The `SET` type is used to store a set of strings. You can store zero or more string values chosen from a list defined at table creation time.
+CREATE TABLE t1 (colors SET('red', 'blue', 'green'));
+INSERT INTO t1 (colors) VALUES ('red,blue');
+
+
+
+
+
