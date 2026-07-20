@@ -298,6 +298,9 @@ CREATE TABLE t1 (colors SET('red', 'blue', 'green'));
 INSERT INTO t1 (colors) VALUES ('red,blue');
 
 
+-- Q60. How do you implement pagination in MySQL?
+-- Answer : Using `LIMIT` and `OFFSET`.
+SELECT * FROM table_name LIMIT 10 OFFSET 20;  -- Skips the first 20 records and fetches the next 10.
 
 
 
