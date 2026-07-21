@@ -306,3 +306,10 @@ SELECT * FROM table_name LIMIT 10 OFFSET 20;  -- Skips the first 20 records and 
 -- Q61. How can you retrieve the month part from a `DATE` field in MySQL?
 -- Answer : Using the `MONTH()` function.
 SELECT MONTH(date_column) FROM table_name;
+
+
+-- Q62. How do you convert a `DATETIME` field into a Unix timestamp?
+-- Answer : Using the `UNIX_TIMESTAMP()` function.
+SELECT UNIX_TIMESTAMP(datetime_column) FROM table_name;
+
+
