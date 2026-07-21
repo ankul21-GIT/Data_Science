@@ -303,4 +303,6 @@ INSERT INTO t1 (colors) VALUES ('red,blue');
 SELECT * FROM table_name LIMIT 10 OFFSET 20;  -- Skips the first 20 records and fetches the next 10.
 
 
-
+-- Q61. How can you retrieve the month part from a `DATE` field in MySQL?
+-- Answer : Using the `MONTH()` function.
+SELECT MONTH(date_column) FROM table_name;
