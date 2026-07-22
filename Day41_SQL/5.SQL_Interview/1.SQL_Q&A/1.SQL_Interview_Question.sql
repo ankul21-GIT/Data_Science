@@ -313,3 +313,6 @@ SELECT MONTH(date_column) FROM table_name;
 SELECT UNIX_TIMESTAMP(datetime_column) FROM table_name;
 
 
+-- Q63. How can you perform a case-sensitive search in a column?
+-- Answer : Using the `BINARY` keyword.
+SELECT * FROM table_name WHERE BINARY column_name = 'Value';
