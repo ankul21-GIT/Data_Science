@@ -316,3 +316,17 @@ SELECT UNIX_TIMESTAMP(datetime_column) FROM table_name;
 -- Q63. How can you perform a case-sensitive search in a column?
 -- Answer : Using the `BINARY` keyword.
 SELECT * FROM table_name WHERE BINARY column_name = 'Value';
+
+
+-- Q64. How can you transpose rows into columns, and vice versa, in a query result?
+-- Answer : This process is known as "Pivoting". To convert rows to columns, you use a combination of aggregate functions with `CASE` statements. For the reverse, known as "Unpivoting", you can use `UNION ALL`.
+-- Pivoting:
+SELECT 
+    SUM(CASE WHEN column = 'value1' THEN 1 ELSE 0 END) AS 'Value1',
+    SUM(CASE WHEN column = 'value2' THEN 1 ELSE 0 END) AS 'Value2'
+FROM table_name;
+
+-- Unpivoting:
+SELECT 'Value1' AS 'Column', Value1 AS 'Value' FROM table_name
+UNION ALL
+SELECT 'Value2' AS 'Column', Value2 AS 'Value' FROM table_name;
