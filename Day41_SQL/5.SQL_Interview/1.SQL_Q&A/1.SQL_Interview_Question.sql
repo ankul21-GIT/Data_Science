@@ -336,3 +336,7 @@ SELECT 'Value2' AS 'Column', Value2 AS 'Value' FROM table_name;
 -- Answer :
 SHOW INDEXES FROM table_name IN database_name;
 
+
+-- Q66. How can you optimize a MySQL query?
+-- Answer : Some methods include using `EXPLAIN` to analyze the query plan, indexing appropriate columns, avoiding the use of wildcard characters at the start of a `LIKE` query, and avoiding the use of `SELECT *`.
+
