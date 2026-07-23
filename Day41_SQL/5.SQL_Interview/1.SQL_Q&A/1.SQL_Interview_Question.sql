@@ -330,3 +330,9 @@ FROM table_name;
 SELECT 'Value1' AS 'Column', Value1 AS 'Value' FROM table_name
 UNION ALL
 SELECT 'Value2' AS 'Column', Value2 AS 'Value' FROM table_name;
+
+
+-- Q65. How can you get a list of all indexes in a database?
+-- Answer :
+SHOW INDEXES FROM table_name IN database_name;
+
