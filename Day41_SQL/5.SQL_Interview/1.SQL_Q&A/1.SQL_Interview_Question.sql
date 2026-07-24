@@ -340,3 +340,11 @@ SHOW INDEXES FROM table_name IN database_name;
 -- Q66. How can you optimize a MySQL query?
 -- Answer : Some methods include using `EXPLAIN` to analyze the query plan, indexing appropriate columns, avoiding the use of wildcard characters at the start of a `LIKE` query, and avoiding the use of `SELECT *`.
 
+
+-- Q67. What is the difference between `MyISAM` and `InnoDB`?
+-- Answer : Major differences include:
+      -- `InnoDB` supports ACID-compliant transactions, whereas `MyISAM` does not.
+      -- `InnoDB` supports foreign key constraints, while `MyISAM` does not.
+      -- `MyISAM` typically offers better read performance, while `InnoDB` offers better write performance.
+      
+      
