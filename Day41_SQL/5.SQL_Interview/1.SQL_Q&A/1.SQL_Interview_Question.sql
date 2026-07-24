@@ -347,4 +347,10 @@ SHOW INDEXES FROM table_name IN database_name;
       -- `InnoDB` supports foreign key constraints, while `MyISAM` does not.
       -- `MyISAM` typically offers better read performance, while `InnoDB` offers better write performance.
       
-      
+
+-- QQ68. How can you lock a table explicitly?
+-- Answer:
+-- LOCK TABLES table_name READ|WRITE; --Lock for reading/writing
+-- UNLOCK TABLES; --To release the lock.
+
+
