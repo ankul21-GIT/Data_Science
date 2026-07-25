@@ -354,3 +354,7 @@ SHOW INDEXES FROM table_name IN database_name;
 -- UNLOCK TABLES; --To release the lock.
 
 
+-- Q69. How do you get the second highest value from a table column?
+-- Answer :
+SELECT MAX(column_name) FROM table_name WHERE column_name < (SELECT MAX(column_name) FROM table_name);
+
