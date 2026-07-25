@@ -358,3 +358,12 @@ SHOW INDEXES FROM table_name IN database_name;
 -- Answer :
 SELECT MAX(column_name) FROM table_name WHERE column_name < (SELECT MAX(column_name) FROM table_name);
 
+
+-- Q70. What is a correlated subquery?
+-- Answer : A correlated subquery is a subquery that references columns from the outer query. It's executed once for each row processed by the outer query.
+SELECT column_name 
+FROM table_name t1
+WHERE some_value = (SELECT MAX(column_name) FROM table_name t2 WHERE t1.id = t2.id);
+
+
+
