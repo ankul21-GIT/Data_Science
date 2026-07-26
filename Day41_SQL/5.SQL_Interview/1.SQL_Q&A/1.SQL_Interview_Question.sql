@@ -370,4 +370,15 @@ WHERE some_value = (SELECT MAX(column_name) FROM table_name t2 WHERE t1.id = t2.
 -- Answer : Optimize queries using `EXPLAIN`, use indexes wisely, normalize database schema, consider hardware upgrades, and configure database parameters appropriately in `my.cnf` or `my.ini`.
 
 
+-- Q71. How do you backup and restore a MySQL database?
+-- Answer :
+/*bash
+mysqldump -u username -p database_name > backup.sql
 
+```
+To restore:
+
+```bash
+mysql -u username -p database_name < backup.sql
+
+*/
