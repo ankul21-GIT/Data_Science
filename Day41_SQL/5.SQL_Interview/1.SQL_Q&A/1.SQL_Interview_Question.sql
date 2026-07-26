@@ -366,4 +366,8 @@ FROM table_name t1
 WHERE some_value = (SELECT MAX(column_name) FROM table_name t2 WHERE t1.id = t2.id);
 
 
+-- Q71. How can you increase the performance of a MySQL database?
+-- Answer : Optimize queries using `EXPLAIN`, use indexes wisely, normalize database schema, consider hardware upgrades, and configure database parameters appropriately in `my.cnf` or `my.ini`.
+
+
 
