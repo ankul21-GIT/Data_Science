@@ -370,7 +370,7 @@ WHERE some_value = (SELECT MAX(column_name) FROM table_name t2 WHERE t1.id = t2.
 -- Answer : Optimize queries using `EXPLAIN`, use indexes wisely, normalize database schema, consider hardware upgrades, and configure database parameters appropriately in `my.cnf` or `my.ini`.
 
 
--- Q71. How do you backup and restore a MySQL database?
+-- Q72. How do you backup and restore a MySQL database?
 -- Answer :
 /*bash
 mysqldump -u username -p database_name > backup.sql
@@ -382,3 +382,10 @@ To restore:
 mysql -u username -p database_name < backup.sql
 
 */
+
+
+-- Q73. What are the different types of MySQL collations?
+-- Answer : Collations specify the rules for string comparison. There are various types like `utf8_general_ci`, `utf8mb4_unicode_ci`, and `latin1_general_ci`.
+
+
+
