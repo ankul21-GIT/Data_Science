@@ -388,4 +388,12 @@ mysql -u username -p database_name < backup.sql
 -- Answer : Collations specify the rules for string comparison. There are various types like `utf8_general_ci`, `utf8mb4_unicode_ci`, and `latin1_general_ci`.
 
 
+-- Q74. How do you find the total number of rows affected by a query?
+-- Answer :
+SELECT ROW_COUNT();
+
+
+
+
+
 
