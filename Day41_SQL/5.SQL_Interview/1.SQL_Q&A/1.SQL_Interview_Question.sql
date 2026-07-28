@@ -397,4 +397,8 @@ SELECT ROW_COUNT();
 -- Answer : `CHAR` has a fixed length, while `VARCHAR` has a variable length. For `CHAR`, unused spaces are filled with blank spaces, whereas `VARCHAR` only uses the required storage plus one or two extra bytes for the length.
 
 
+-- Q76. How can you change the data type of a column in MySQL?
+-- Answer :
+ALTER TABLE table_name MODIFY column_name NEW_DATA_TYPE;
+
 
