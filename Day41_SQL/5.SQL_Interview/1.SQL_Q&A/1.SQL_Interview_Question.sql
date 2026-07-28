@@ -393,7 +393,8 @@ mysql -u username -p database_name < backup.sql
 SELECT ROW_COUNT();
 
 
-
+-- Q75. Explain the difference between `CHAR` and `VARCHAR` data types.
+-- Answer : `CHAR` has a fixed length, while `VARCHAR` has a variable length. For `CHAR`, unused spaces are filled with blank spaces, whereas `VARCHAR` only uses the required storage plus one or two extra bytes for the length.
 
 
 
