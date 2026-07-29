@@ -407,3 +407,10 @@ ALTER TABLE table_name MODIFY column_name NEW_DATA_TYPE;
 SELECT table_schema AS "Database", ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)" 
 FROM information_schema.TABLES 
 GROUP BY table_schema;
+
+
+-- Q78. How can you delete all records from a table without deleting the table?
+-- Answer :
+TRUNCATE TABLE table_name;
+
+
