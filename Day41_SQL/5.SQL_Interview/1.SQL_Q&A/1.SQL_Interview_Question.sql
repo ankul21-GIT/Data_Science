@@ -402,3 +402,8 @@ SELECT ROW_COUNT();
 ALTER TABLE table_name MODIFY column_name NEW_DATA_TYPE;
 
 
+-- Q77. How can you measure the size of a MySQL database?
+-- Answer :
+SELECT table_schema AS "Database", ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)" 
+FROM information_schema.TABLES 
+GROUP BY table_schema;
