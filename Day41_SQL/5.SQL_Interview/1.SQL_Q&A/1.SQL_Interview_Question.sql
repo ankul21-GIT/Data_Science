@@ -419,3 +419,7 @@ TRUNCATE TABLE table_name;
 SELECT DISTINCT column_name FROM table_name;
 
 
+-- Q80. How do you combine results from multiple SQL queries and return a single table?
+-- Answer : You can use the `UNION` or `UNION ALL` operator, depending on whether or not you want duplicate records.
+
+
