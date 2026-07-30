@@ -414,3 +414,8 @@ GROUP BY table_schema;
 TRUNCATE TABLE table_name;
 
 
+-- Q79. How can you prevent a query from displaying duplicate rows?
+-- Answer :
+SELECT DISTINCT column_name FROM table_name;
+
+
