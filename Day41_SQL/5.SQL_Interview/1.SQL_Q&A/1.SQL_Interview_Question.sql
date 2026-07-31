@@ -433,3 +433,6 @@ SELECT UPPER(column_name) FROM table_name;
 SELECT TRIM(column_name) FROM table_name;
 
 
+-- Q83. Explain the purpose of `information_schema` in MySQL.
+-- Answer : `information_schema` is a meta-database that provides detailed information about all other databases, tables, columns, indexes, constraints, etc. present in the MySQL server.
+
