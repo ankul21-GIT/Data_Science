@@ -428,4 +428,8 @@ SELECT DISTINCT column_name FROM table_name;
 SELECT UPPER(column_name) FROM table_name;
 
 
+-- Q82. How can you remove leading and trailing whitespace from a string in MySQL?
+-- Answer :
+SELECT TRIM(column_name) FROM table_name;
+
 
