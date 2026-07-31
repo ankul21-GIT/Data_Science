@@ -436,3 +436,7 @@ SELECT TRIM(column_name) FROM table_name;
 -- Q83. Explain the purpose of `information_schema` in MySQL.
 -- Answer : `information_schema` is a meta-database that provides detailed information about all other databases, tables, columns, indexes, constraints, etc. present in the MySQL server.
 
+
+-- Q84. How can you ensure that a field value is unique across the table, other than using the `PRIMARY KEY` constraint?
+-- Answer : Use the `UNIQUE` constraint on the desired column.
+ALTER TABLE table_name ADD UNIQUE (column_name);
