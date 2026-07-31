@@ -423,3 +423,9 @@ SELECT DISTINCT column_name FROM table_name;
 -- Answer : You can use the `UNION` or `UNION ALL` operator, depending on whether or not you want duplicate records.
 
 
+-- Q81. How can you convert a string to upper-case in MySQL?
+-- Answer :
+SELECT UPPER(column_name) FROM table_name;
+
+
+
