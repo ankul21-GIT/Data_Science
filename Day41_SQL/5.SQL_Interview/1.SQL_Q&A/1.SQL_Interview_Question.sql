@@ -444,3 +444,12 @@ ALTER TABLE table_name ADD UNIQUE (column_name);
 
 -- QQ85. How can you count the total number of tables in a database?**
 SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'your_database_name';
+
+
+-- Q86. How can you find all the tables that have a specific column name in a database?
+-- Answer :
+SELECT table_name 
+FROM information_schema.columns 
+WHERE column_name = 'desired_column' AND table_schema = 'your_database_name';
+
+
