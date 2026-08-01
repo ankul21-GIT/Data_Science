@@ -440,3 +440,7 @@ SELECT TRIM(column_name) FROM table_name;
 -- Q84. How can you ensure that a field value is unique across the table, other than using the `PRIMARY KEY` constraint?
 -- Answer : Use the `UNIQUE` constraint on the desired column.
 ALTER TABLE table_name ADD UNIQUE (column_name);
+
+
+-- QQ85. How can you count the total number of tables in a database?**
+SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'your_database_name';
