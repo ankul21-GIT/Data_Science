@@ -453,3 +453,10 @@ FROM information_schema.columns
 WHERE column_name = 'desired_column' AND table_schema = 'your_database_name';
 
 
+-- Q87. How can you replace a specific string in a field?
+-- Answer :
+UPDATE table_name SET column_name = REPLACE(column_name, 'old_string', 'new_string');
+
+
+
+
