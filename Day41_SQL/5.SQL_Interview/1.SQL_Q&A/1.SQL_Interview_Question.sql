@@ -458,5 +458,10 @@ WHERE column_name = 'desired_column' AND table_schema = 'your_database_name';
 UPDATE table_name SET column_name = REPLACE(column_name, 'old_string', 'new_string');
 
 
+-- Q88. What is the difference between `NOW()` and `CURDATE()` functions in MySQL?
+-- Answer : `NOW()` returns the current date and time, while `CURDATE()` returns only the current date.
+
+   
+   
 
 
