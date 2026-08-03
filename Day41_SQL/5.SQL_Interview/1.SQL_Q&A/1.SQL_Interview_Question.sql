@@ -461,6 +461,19 @@ UPDATE table_name SET column_name = REPLACE(column_name, 'old_string', 'new_stri
 -- Q88. What is the difference between `NOW()` and `CURDATE()` functions in MySQL?
 -- Answer : `NOW()` returns the current date and time, while `CURDATE()` returns only the current date.
 
+
+-- Q89. Explain the `WITH` clause and provide an example.
+-- Answer : The `WITH` clause, also known as Common Table Expressions (CTE), provides a temporary result set that you can reference within a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement. It's useful for breaking down complex queries.
+
+WITH CTE_Name AS (
+    SELECT column1, column2
+    FROM table_name
+    WHERE condition
+)
+SELECT * FROM CTE_Name;
+
+
+
    
    
 
