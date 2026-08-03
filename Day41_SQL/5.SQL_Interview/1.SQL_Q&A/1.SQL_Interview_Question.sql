@@ -473,6 +473,14 @@ WITH CTE_Name AS (
 SELECT * FROM CTE_Name;
 
 
+-- Q90. What is a self-join and why would you use it?
+-- Answer : A self-join is a join where a table is joined with itself. It's useful for finding relationships within the same table.
+
+SELECT A.column_name, B.column_name 
+FROM table_name A, table_name B 
+WHERE A.column_name = B.column_name;
+
+
 
    
    
