@@ -504,6 +504,13 @@ FROM (
 ) AS subquery_name;
 
 
+-- Q92. How can you update data in one table based on data in another table?
+-- Answer :
+
+UPDATE table1
+SET table1.column_name = table2.column_name
+FROM table2
+WHERE table1.another_column = table2.another_column;
 
 
 
