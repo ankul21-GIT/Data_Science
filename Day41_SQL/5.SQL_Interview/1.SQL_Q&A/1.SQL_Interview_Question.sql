@@ -480,6 +480,33 @@ SELECT A.column_name, B.column_name
 FROM table_name A, table_name B 
 WHERE A.column_name = B.column_name;
 
+-- Q91. What are the different types of subqueries? Explain with examples.
+-- Answer : There are three types:
+
+-- Scalar subquery: Returns a single value.
+
+SELECT column_name 
+FROM table_name 
+WHERE another_column = (SELECT MAX(column_name) FROM table_name);
+
+-- Row subquery: Returns a single row.
+
+SELECT column1, column2 
+FROM table_name 
+WHERE (column1, column2) = (SELECT column1, column2 FROM another_table WHERE condition);
+
+
+-- Table subquery: Returns a table.
+
+SELECT column_name 
+FROM (
+  SELECT column_name FROM table_name WHERE condition
+) AS subquery_name;
+
+
+
+
+
 
 
    
