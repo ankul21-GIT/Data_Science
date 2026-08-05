@@ -513,6 +513,10 @@ FROM table2
 WHERE table1.another_column = table2.another_column;
 
 
+-- Q93. How can you retrieve a random row from a table?
+-- Answer :
+SELECT column_name FROM table_name ORDER BY RAND() LIMIT 1;
+
 
 
 
