@@ -518,7 +518,10 @@ WHERE table1.another_column = table2.another_column;
 SELECT column_name FROM table_name ORDER BY RAND() LIMIT 1;
 
 
+-- Q94. What's the difference between `INNER JOIN` and `OUTER JOIN`?
 
+
+-- Answer :  `INNER JOIN` returns rows when there's a match in both tables. `OUTER JOIN` returns all rows from one table and the matching rows from the other table, filling with NULL if no match is found.
 
    
    
