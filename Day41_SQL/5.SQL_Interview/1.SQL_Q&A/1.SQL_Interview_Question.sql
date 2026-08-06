@@ -519,11 +519,13 @@ SELECT column_name FROM table_name ORDER BY RAND() LIMIT 1;
 
 
 -- Q94. What's the difference between `INNER JOIN` and `OUTER JOIN`?
-
-
 -- Answer :  `INNER JOIN` returns rows when there's a match in both tables. `OUTER JOIN` returns all rows from one table and the matching rows from the other table, filling with NULL if no match is found.
 
-   
+  
+-- Q95. How can you clone a table, including both data and schema?
+-- Answer :
+CREATE TABLE new_table AS SELECT * FROM original_table;
+
    
 
 
