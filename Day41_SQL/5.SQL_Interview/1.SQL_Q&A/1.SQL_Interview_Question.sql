@@ -532,6 +532,13 @@ CREATE TABLE new_table AS SELECT * FROM original_table;
 INSERT INTO table_name (column1, column2) 
 VALUES (value1a, value2a), 
        (value1b, value2b);
+  
+  
+-- Q96. How do you insert multiple rows in a single SQL query?
+-- Answer :
+INSERT INTO table_name (column1, column2) 
+VALUES (value1a, value2a), 
+       (value1b, value2b);
    
 
 
