@@ -541,4 +541,15 @@ VALUES (value1a, value2a),
        (value1b, value2b);
    
 
+-- Q97. Explain partitions in MySQL. How do you create them?
+-- Answer : Partitioning divides a table into smaller, more manageable pieces, yet still being treated as a single table. It can improve performance and assist in organizing large datasets.
 
+CREATE TABLE table_name (
+   column_name1 INT,
+   column_name2 DATE
+)
+PARTITION BY RANGE(YEAR(column_name2)) (
+   PARTITION p0 VALUES LESS THAN (1991),
+   PARTITION p1 VALUES LESS THAN (1995),
+   PARTITION p2 VALUES LESS THAN (1999)
+);
