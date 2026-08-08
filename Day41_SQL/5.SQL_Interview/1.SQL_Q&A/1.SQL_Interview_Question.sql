@@ -562,6 +562,10 @@ FROM table_name
 GROUP BY group_column;
 
 
+-- Q99. How can you prevent SQL injection in your queries?
+-- Answer:** Using parameterized queries or prepared statements. In PHP, for instance, you'd use PDO or MySQLi to bind parameters.
+
+
 
 
 
