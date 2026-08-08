@@ -553,3 +553,15 @@ PARTITION BY RANGE(YEAR(column_name2)) (
    PARTITION p1 VALUES LESS THAN (1995),
    PARTITION p2 VALUES LESS THAN (1999)
 );
+
+
+-- Q98. What is the `GROUP_CONCAT` function and provide an example.
+-- Answer : It's used to concatenate values from multiple rows into a single string.
+SELECT group_column, GROUP_CONCAT(value_column)
+FROM table_name
+GROUP BY group_column;
+
+
+
+
+
