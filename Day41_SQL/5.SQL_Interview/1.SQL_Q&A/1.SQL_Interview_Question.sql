@@ -572,6 +572,13 @@ SELECT @@sql_mode;  -- To show
 SET sql_mode = 'modes';  -- To change
 
 
+-- Q101. What is a transaction and how would you use it in MySQL?
+-- Answer : Transactions group a set of tasks into a single execution unit. If one task fails, all fail. Useful for maintaining data integrity.
+START TRANSACTION;
+INSERT INTO table_name1 ...;
+INSERT INTO table_name2 ...;
+COMMIT;  -- Or ROLLBACK;
+
 
 
 
