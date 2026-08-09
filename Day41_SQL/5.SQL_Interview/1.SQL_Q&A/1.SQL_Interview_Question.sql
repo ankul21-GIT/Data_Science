@@ -566,6 +566,12 @@ GROUP BY group_column;
 -- Answer:** Using parameterized queries or prepared statements. In PHP, for instance, you'd use PDO or MySQLi to bind parameters.
 
 
+-- Q100. How do you show the current SQL mode, and how can you change it?
+-- Answer : 
+SELECT @@sql_mode;  -- To show
+SET sql_mode = 'modes';  -- To change
+
+
 
 
 
