@@ -580,5 +580,9 @@ INSERT INTO table_name2 ...;
 COMMIT;  -- Or ROLLBACK;
 
 
+-- Q102. What are the differences between `VARCHAR` and `TEXT` data types?
+-- Answer : While both are used to store strings, `VARCHAR` can store up to 65,535 characters and you can specify its max length, while `TEXT` can store up to 65,535 characters without specifying max length. `VARCHAR` can have a default value, but `TEXT` cannot.
+
+
 
 
