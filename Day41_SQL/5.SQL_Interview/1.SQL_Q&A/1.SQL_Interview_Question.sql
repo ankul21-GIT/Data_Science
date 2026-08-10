@@ -597,6 +597,9 @@ CREATE FULLTEXT INDEX index_name ON table_name(column_name);
 SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('search term');
 
 
+-- Q105. How can you check for index fragmentation on a table and defragment it?
+-- Answer : You can check fragmentation using `SHOW TABLE STATUS LIKE 'table_name';` and optimize (defragment) using `OPTIMIZE TABLE table_name;`.
+
 
 
 
