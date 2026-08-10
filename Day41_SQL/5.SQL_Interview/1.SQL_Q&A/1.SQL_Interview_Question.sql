@@ -588,6 +588,13 @@ COMMIT;  -- Or ROLLBACK;
 -- Answer : Identify them using a `LEFT JOIN` to find orphaned records, and either delete these records or update them to restore referential integrity.
 
 
+-- Q104. How do you use `FULLTEXT` indexing in MySQL?
+-- Answer :`FULLTEXT` indexes are used for full-text searches. You can create one with:
+
+CREATE FULLTEXT INDEX index_name ON table_name(column_name);
+
+-- Then you'd search with:
+SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('search term');
 
 
 
