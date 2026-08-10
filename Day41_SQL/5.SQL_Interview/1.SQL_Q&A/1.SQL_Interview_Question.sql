@@ -584,5 +584,12 @@ COMMIT;  -- Or ROLLBACK;
 -- Answer : While both are used to store strings, `VARCHAR` can store up to 65,535 characters and you can specify its max length, while `TEXT` can store up to 65,535 characters without specifying max length. `VARCHAR` can have a default value, but `TEXT` cannot.
 
 
+-- Q103. How do you find and fix broken foreign key constraints?
+-- Answer : Identify them using a `LEFT JOIN` to find orphaned records, and either delete these records or update them to restore referential integrity.
+
+
+
+
+
 
 
