@@ -601,5 +601,10 @@ SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('search term');
 -- Answer : You can check fragmentation using `SHOW TABLE STATUS LIKE 'table_name';` and optimize (defragment) using `OPTIMIZE TABLE table_name;`.
 
 
+-- Q106. How can you convert character sets in columns?
+ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name;
+
+
+
 
 
