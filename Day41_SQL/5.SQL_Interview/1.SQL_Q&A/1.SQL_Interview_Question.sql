@@ -605,6 +605,10 @@ SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('search term');
 ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name;
 
 
+-- Q107. How do you schedule a recurring SQL script execution in MySQL?
+-- Answer : Using MySQL's Event Scheduler. First, ensure the scheduler is on with `SHOW VARIABLES LIKE 'event_scheduler';`, then create your scheduled event.
+
+
 
 
 
