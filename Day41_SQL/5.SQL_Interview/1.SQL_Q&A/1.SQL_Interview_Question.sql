@@ -613,6 +613,9 @@ ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name
 -- Answer : Stored procedures are SQL codes saved in the database to be reused. Created using `CREATE PROCEDURE`, and called via `CALL procedure_name()`.
 
 
+-- Q109. How would you monitor the performance of your MySQL database in real-time?
+-- Answer:** Tools like `SHOW PROCESSLIST`, Performance Schema, MySQL Enterprise Monitor, and third-party tools like Percona Monitoring and Management.
+
 
 
 
