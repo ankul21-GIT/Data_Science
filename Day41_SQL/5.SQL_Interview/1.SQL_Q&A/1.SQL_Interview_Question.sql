@@ -609,6 +609,12 @@ ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name
 -- Answer : Using MySQL's Event Scheduler. First, ensure the scheduler is on with `SHOW VARIABLES LIKE 'event_scheduler';`, then create your scheduled event.
 
 
+-- Q108. What are MySQL stored procedures and how do you use them?
+-- Answer : Stored procedures are SQL codes saved in the database to be reused. Created using `CREATE PROCEDURE`, and called via `CALL procedure_name()`.
+
+
+
+
 
 
 
