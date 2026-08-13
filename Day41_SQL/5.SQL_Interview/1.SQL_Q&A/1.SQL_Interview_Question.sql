@@ -617,9 +617,15 @@ ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name
 -- Answer:** Tools like `SHOW PROCESSLIST`, Performance Schema, MySQL Enterprise Monitor, and third-party tools like Percona Monitoring and Management.
 
 
--- Q110. How can you run SQL script from the command line without entering the MySQL console?**
+-- Q110. How can you run SQL script from the command line without entering the MySQL console?
 -- Answer : Use:
 -- mysql -u username -p database_name < script.sql
+
+
+-- Q111. What is the `EXPLAIN` keyword in MySQL?
+-- Answer : `EXPLAIN` provides a query execution plan, showing how MySQL will execute the query, which can be vital for optimization.
+
+
 
 
 
