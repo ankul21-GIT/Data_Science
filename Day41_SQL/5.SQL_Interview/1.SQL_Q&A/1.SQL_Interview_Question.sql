@@ -630,6 +630,10 @@ ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name
 -- Answer : By adding the `NOT NULL` constraint during table creation or modification.
 
 
+-- Q113. How do you rename a database in MySQL?
+-- Answer : MySQL does not have a straightforward command to rename a database. Instead, one common approach is to dump the database, create a new one with the desired name, and then restore the dumped database into the new one.
+
+
 
 
 
