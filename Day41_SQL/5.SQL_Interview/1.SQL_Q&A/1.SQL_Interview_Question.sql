@@ -626,6 +626,10 @@ ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name
 -- Answer : `EXPLAIN` provides a query execution plan, showing how MySQL will execute the query, which can be vital for optimization.
 
 
+-- Q112. How do you enforce a column to not accept NULL values?
+-- Answer : By adding the `NOT NULL` constraint during table creation or modification.
+
+
 
 
 
