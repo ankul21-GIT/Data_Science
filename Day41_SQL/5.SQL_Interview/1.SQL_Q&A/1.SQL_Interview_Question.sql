@@ -639,6 +639,10 @@ ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name
 ALTER TABLE table_name AUTO_INCREMENT = value;
 
 
+-- Q115. How can you handle time zones in MySQL?
+-- Answer : MySQL provides the `CONVERT_TZ()` function to convert datetime values across time zones. Additionally, `SET time_zone = timezone;` sets the time zone for the current session.
+
+
 
 
 
