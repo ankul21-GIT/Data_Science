@@ -634,6 +634,9 @@ ALTER TABLE table_name MODIFY column_name COLUMN_TYPE CHARACTER SET charset_name
 -- Answer : MySQL does not have a straightforward command to rename a database. Instead, one common approach is to dump the database, create a new one with the desired name, and then restore the dumped database into the new one.
 
 
+-- Q114. How can you reset the auto-increment value of a column?
+-- Answer :
+ALTER TABLE table_name AUTO_INCREMENT = value;
 
 
 
