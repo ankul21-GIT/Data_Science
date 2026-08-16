@@ -643,6 +643,9 @@ ALTER TABLE table_name AUTO_INCREMENT = value;
 -- Answer : MySQL provides the `CONVERT_TZ()` function to convert datetime values across time zones. Additionally, `SET time_zone = timezone;` sets the time zone for the current session.
 
 
+-- Q116. How do you retrieve only a specified number of characters from a string column?**
+-- Answer :
+SELECT LEFT(column_name, number_of_chars) FROM table_name;
 
 
 
