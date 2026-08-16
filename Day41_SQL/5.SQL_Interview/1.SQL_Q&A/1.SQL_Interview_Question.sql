@@ -648,5 +648,14 @@ ALTER TABLE table_name AUTO_INCREMENT = value;
 SELECT LEFT(column_name, number_of_chars) FROM table_name;
 
 
+-- Q117. What are views in MySQL and why are they used?
+-- Answer : Views are virtual tables based on the result set of an SQL statement. They encapsulate the SQL statement and present data in a simplified manner, ensuring data abstraction, protection, and to represent a subset of the data.
+
+
+
+
+
+
+
 
 
