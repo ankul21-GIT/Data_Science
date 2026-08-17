@@ -652,7 +652,11 @@ SELECT LEFT(column_name, number_of_chars) FROM table_name;
 -- Answer : Views are virtual tables based on the result set of an SQL statement. They encapsulate the SQL statement and present data in a simplified manner, ensuring data abstraction, protection, and to represent a subset of the data.
 
 
-
+-- Q118. How do you find the second highest value in a column?
+-- Answer : 
+SELECT MAX(column_name) 
+FROM table_name 
+WHERE column_name NOT IN (SELECT MAX(column_name) FROM table_name);
 
 
 
