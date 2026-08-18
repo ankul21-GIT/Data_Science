@@ -20,6 +20,17 @@ WHERE N-1 = (SELECT COUNT(DISTINCT salary)
 */
 
 
+-- Q3. How can you optimize a MySQL query?
+-- Answer :
+/*Some of the ways include:
+
+
+- Using indexes effectively.
+- Avoiding `SELECT *`.
+- Limiting the result set using `LIMIT`.
+- Using `EXPLAIN` to understand the query execution plan.
+- Avoiding heavy operations like subqueries or joins if not necessary.
+*/
 
 
 
