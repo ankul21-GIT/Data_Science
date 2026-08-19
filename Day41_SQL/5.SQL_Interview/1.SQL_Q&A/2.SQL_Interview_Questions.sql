@@ -38,6 +38,12 @@ WHERE N-1 = (SELECT COUNT(DISTINCT salary)
 -- CHAR has a fixed length whereas VARCHAR has a variable length. CHAR always uses the same amount of storage space per entry, while VARCHAR uses only the space required plus a small overhead.
 
 
+-- Q5. Write a query to retrieve duplicate records from a table without using the `DISTINCT` keyword.
+-- Answer :
+SELECT column_name, COUNT(column_name) 
+FROM table_name 
+GROUP BY column_name 
+HAVING COUNT(column_name) > 1;
 
 
              
