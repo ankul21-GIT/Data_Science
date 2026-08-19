@@ -33,6 +33,9 @@ WHERE N-1 = (SELECT COUNT(DISTINCT salary)
 */
 
 
+-- Q4. Explain the difference between `CHAR` and `VARCHAR` data types?
+-- Answer :
+-- CHAR has a fixed length whereas VARCHAR has a variable length. CHAR always uses the same amount of storage space per entry, while VARCHAR uses only the space required plus a small overhead.
 
 
 
