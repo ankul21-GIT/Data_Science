@@ -50,5 +50,11 @@ HAVING COUNT(column_name) > 1;
 -- Answer : UNION combines the result sets of two or more queries and removes duplicates. UNION ALL combines result sets but does not remove duplicates.
 
 
+-- Q7. How can you fetch alternate records from a table?
+-- Answer :
+-- For odd rows:
+SELECT * FROM table_name WHERE MOD(id,2) = 1;
 
+-- For even rows:
+SELECT * FROM table_name WHERE MOD(id,2) = 0;
              
