@@ -46,4 +46,9 @@ GROUP BY column_name
 HAVING COUNT(column_name) > 1;
 
 
+-- Q6. What are the differences between `UNION` and `UNION ALL`?
+-- Answer : UNION combines the result sets of two or more queries and removes duplicates. UNION ALL combines result sets but does not remove duplicates.
+
+
+
              
