@@ -63,7 +63,9 @@ SELECT * FROM table_name WHERE MOD(id,2) = 0;
 -- Answer : A stored procedure is a precompiled group of SQL statements stored in the database. It can be executed multiple times whenever required.
 
 
+-- Q9. How can you prevent SQL injection in MySQL?
 
+-- Answer : Use prepared statements with parameterized queries, escape user inputs, and avoid using raw SQL queries with user input.
 
 
              
