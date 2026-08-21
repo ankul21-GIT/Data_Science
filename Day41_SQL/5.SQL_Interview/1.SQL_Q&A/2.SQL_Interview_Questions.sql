@@ -57,4 +57,13 @@ SELECT * FROM table_name WHERE MOD(id,2) = 1;
 
 -- For even rows:
 SELECT * FROM table_name WHERE MOD(id,2) = 0;
+
+
+-- Q8. What is a `stored procedure` in MySQL?
+-- Answer : A stored procedure is a precompiled group of SQL statements stored in the database. It can be executed multiple times whenever required.
+
+
+
+
+
              
