@@ -68,4 +68,17 @@ SELECT * FROM table_name WHERE MOD(id,2) = 0;
 -- Answer : Use prepared statements with parameterized queries, escape user inputs, and avoid using raw SQL queries with user input.
 
 
+-- Q10. Write a query to find the second highest salary from a table.
+-- Answer :
+SELECT MAX(salary) 
+FROM employee 
+WHERE salary NOT IN (SELECT MAX(salary) FROM employee);
+
+
+
+
+
+
+
+
              
