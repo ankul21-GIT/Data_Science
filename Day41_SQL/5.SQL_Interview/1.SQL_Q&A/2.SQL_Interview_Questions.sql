@@ -84,6 +84,20 @@ ALTER TABLE table_name ADD INDEX(index_name, column_name);
 -- Answer : ACID stands for Atomicity, Consistency, Isolation, and Durability. It ensures that database transactions are processed reliably.
 
 
+-- Q13. How can you improve the performance of a MySQL database?**
+-- Answer :
+-- Some methods include:
+
+-- Normalizing the database.
+-- Using appropriate indexes.
+-- Using the latest versions of MySQL.
+-- Using caching mechanisms.
+-- Optimizing server settings.
+
+
+
+
+
 
 
 
