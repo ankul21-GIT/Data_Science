@@ -75,9 +75,13 @@ FROM employee
 WHERE salary NOT IN (SELECT MAX(salary) FROM employee);
 
 
--- Q11. How do you index a column in a table?**
+-- Q11. How do you index a column in a table?
 -- Answer :
 ALTER TABLE table_name ADD INDEX(index_name, column_name);
+
+
+-- Q12. Explain the `ACID` properties in a database.
+-- Answer : ACID stands for Atomicity, Consistency, Isolation, and Durability. It ensures that database transactions are processed reliably.
 
 
 
