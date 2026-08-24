@@ -95,6 +95,12 @@ ALTER TABLE table_name ADD INDEX(index_name, column_name);
 -- Optimizing server settings.
 
 
+-- Q14. Write a query to find all employees who started after Jan 1, 2020, but before Jan 1, 2023.
+-- Answer :
+SELECT * FROM employees 
+WHERE start_date BETWEEN '2020-01-01' AND '2022-12-31';
+
+
 
 
 
