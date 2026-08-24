@@ -101,6 +101,8 @@ SELECT * FROM employees
 WHERE start_date BETWEEN '2020-01-01' AND '2022-12-31';
 
 
+-- Q15. What is a `trigger` in MySQL?
+-- Answer : A trigger is a set of instructions that are automatically executed (or fired) in response to a specific event, such as inserting, updating, or deleting records in a table.
 
 
 
