@@ -109,6 +109,10 @@ WHERE start_date BETWEEN '2020-01-01' AND '2022-12-31';
 -- Answer : A view is a virtual table based on the result set of an SQL statement. It contains rows and columns from one or more tables. Views do not store data physically, but rather, they provide a way to look at data in different ways without changing the underlying schema.
 
 
+-- Q17. How can you implement pagination in MySQL?**
+-- Answer :Pagination can be implemented using the `LIMIT` and `OFFSET` clauses.
+
+
 
 
 
