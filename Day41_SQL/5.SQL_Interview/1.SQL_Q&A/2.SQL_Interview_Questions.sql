@@ -105,7 +105,8 @@ WHERE start_date BETWEEN '2020-01-01' AND '2022-12-31';
 -- Answer : A trigger is a set of instructions that are automatically executed (or fired) in response to a specific event, such as inserting, updating, or deleting records in a table.
 
 
-
+-- Q16. What is a view in MySQL?**
+-- Answer : A view is a virtual table based on the result set of an SQL statement. It contains rows and columns from one or more tables. Views do not store data physically, but rather, they provide a way to look at data in different ways without changing the underlying schema.
 
 
 
