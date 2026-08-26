@@ -113,6 +113,18 @@ WHERE start_date BETWEEN '2020-01-01' AND '2022-12-31';
 -- Answer :Pagination can be implemented using the `LIMIT` and `OFFSET` clauses.
 
 
+-- Q18. Explain the difference between `MyISAM` and `InnoDB`.**
+-- Answer :
+/*
+MyISAM and InnoDB are storage engines for MySQL.
+
+- MyISAM: Table-level locking, no foreign key constraints, no transaction support.
+- InnoDB: Row-level locking, supports foreign key constraints, ACID-compliant with transaction support.
+*/
+
+
+
+
 
 
 
