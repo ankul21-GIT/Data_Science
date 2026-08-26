@@ -123,15 +123,14 @@ MyISAM and InnoDB are storage engines for MySQL.
 */
 
 
--- Q19. How can you find all tables that have specific column names in a database?
--- Answer :
+-- QQ19. How can you find all tables that have specific column names in a database?**
+-- Answer:
 /*
 SELECT table_name 
 FROM INFORMATION_SCHEMA.COLUMNS 
 WHERE COLUMN_NAME = 'your_column_name' 
 AND TABLE_SCHEMA = 'your_database_name';
 */
-
 
 
 
