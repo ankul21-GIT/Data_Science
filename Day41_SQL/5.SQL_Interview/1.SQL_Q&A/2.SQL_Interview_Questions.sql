@@ -148,6 +148,13 @@ mysql -u username -p database_name < backup.sql
 */
 
 
+-- Q21. How do you concatenate strings in MySQL?**
+/* Answer :
+You can use the `CONCAT` function or the `||` operator (if the `PIPES_AS_CONCAT` SQL mode is enabled).
+
+SELECT CONCAT(first_name, ' ', last_name) AS full_name 
+FROM employees;
+*/
 
 
 
