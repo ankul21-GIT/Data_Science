@@ -164,9 +164,8 @@ FROM table_name
 GROUP BY column_name;
 
 
-
-
-
+-- Q23. Explain the difference between a `PRIMARY KEY` and a `UNIQUE` constraint.
+-- Answer: Both enforce uniqueness for the values in a column, but a table can have only one primary key, whereas it can have multiple unique constraints. Additionally, primary keys automatically create a clustered index on the column, whereas unique constraints create a non-clustered index by default.
 
 
 
