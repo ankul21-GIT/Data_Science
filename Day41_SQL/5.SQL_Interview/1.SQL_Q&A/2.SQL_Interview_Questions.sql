@@ -157,6 +157,11 @@ FROM employees;
 */
 
 
+-- Q22. How can you retrieve unique values from a column without using the `DISTINCT` keyword?
+-- Answer :
+SELECT column_name 
+FROM table_name 
+GROUP BY column_name;
 
 
 
