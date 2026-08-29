@@ -173,6 +173,12 @@ GROUP BY column_name;
 CREATE TABLE new_table AS SELECT * FROM old_table;
 
 
+-- Q25. How can you convert a UNIX timestamp into a readable date format in MySQL?
+-- Answer :
+SELECT FROM_UNIXTIME(your_unix_timestamp_column) 
+FROM your_table;
+
+
 
 
              
