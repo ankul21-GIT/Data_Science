@@ -168,6 +168,9 @@ GROUP BY column_name;
 -- Answer: Both enforce uniqueness for the values in a column, but a table can have only one primary key, whereas it can have multiple unique constraints. Additionally, primary keys automatically create a clustered index on the column, whereas unique constraints create a non-clustered index by default.
 
 
+-- Q24. How can you create a copy of a table, including both structure and data, without using any backup utilities?**
+-- Answer :
+CREATE TABLE new_table AS SELECT * FROM old_table;
 
 
 
