@@ -179,6 +179,23 @@ SELECT FROM_UNIXTIME(your_unix_timestamp_column)
 FROM your_table;
 
 
+-- Q26. What's the difference between `NOW()` and `CURRENT_DATE()` in MySQL?
+-- Answer :
+-- `NOW()` returns the current date and time, while `CURRENT_DATE()` returns only the current date.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
              
