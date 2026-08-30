@@ -184,7 +184,10 @@ FROM your_table;
 -- `NOW()` returns the current date and time, while `CURRENT_DATE()` returns only the current date.
 
 
-
+-- Q27. Write a query to get the length of the string in a column.
+-- Answer :
+SELECT LENGTH(column_name) 
+FROM table_name;
 
 
 
