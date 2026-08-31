@@ -195,10 +195,9 @@ FROM table_name;
 TRUNCATE TABLE table_name;
 
 
-
-
-
-
+-- Q29. What is the purpose of the `GROUP_CONCAT` function in MySQL?
+-- Answer :
+-- `GROUP_CONCAT` function is used to concatenate values from multiple rows into a single string. It's especially useful when used with `GROUP BY`.
 
 
 
