@@ -190,6 +190,10 @@ SELECT LENGTH(column_name)
 FROM table_name;
 
 
+-- Q28. How do you delete all records from a table without deleting the table itself?**
+-- Answer :
+TRUNCATE TABLE table_name;
+
 
 
 
