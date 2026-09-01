@@ -200,6 +200,10 @@ TRUNCATE TABLE table_name;
 -- `GROUP_CONCAT` function is used to concatenate values from multiple rows into a single string. It's especially useful when used with `GROUP BY`.
 
 
+-- Q30. How do you convert a data type of a column in a table?
+-- Answer :
+ALTER TABLE table_name 
+MODIFY column_name NEW_DATA_TYPE;
 
 
 
