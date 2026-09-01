@@ -206,6 +206,10 @@ ALTER TABLE table_name
 MODIFY column_name NEW_DATA_TYPE;
 
 
+-- Q31. How would you retrieve the total count of rows, but only count each distinct value in a column once?
+-- Answer:
+SELECT COUNT(DISTINCT column_name) 
+FROM table_name;
 
 
              
