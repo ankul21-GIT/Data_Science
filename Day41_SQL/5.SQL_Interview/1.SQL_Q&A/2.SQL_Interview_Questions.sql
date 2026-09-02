@@ -221,6 +221,15 @@ ORDER BY COUNT(column_name) DESC
 LIMIT 3;
 
 
+-- Q33. Write a query to get the monthly sales amount for the last 12 months.
+-- Answer :
+SELECT MONTH(sale_date) AS month, YEAR(sale_date) AS year, SUM(amount) AS monthly_sales
+FROM sales 
+WHERE sale_date BETWEEN DATE_SUB(NOW(), INTERVAL 12 MONTH) AND NOW() 
+GROUP BY YEAR(sale_date), MONTH(sale_date) 
+ORDER BY YEAR(sale_date) DESC, MONTH(sale_date) DESC;
+
+
 
 
 
