@@ -212,4 +212,21 @@ SELECT COUNT(DISTINCT column_name)
 FROM table_name;
 
 
-             
+-- Q32. How would you find the three most frequent values in a column along with their counts?
+-- Answer :
+SELECT column_name, COUNT(column_name) 
+FROM table_name 
+GROUP BY column_name 
+ORDER BY COUNT(column_name) DESC 
+LIMIT 3;
+
+
+
+
+
+
+
+
+
+
+
