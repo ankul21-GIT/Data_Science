@@ -230,9 +230,12 @@ GROUP BY YEAR(sale_date), MONTH(sale_date)
 ORDER BY YEAR(sale_date) DESC, MONTH(sale_date) DESC;
 
 
-
-
-
+-- Q34. Write a query to find employees who have managers with a salary greater than $100,000.
+-- Answer :
+SELECT e1.* 
+FROM employees e1 
+INNER JOIN employees e2 ON e1.manager_id = e2.id 
+WHERE e2.salary > 100000;
 
 
 
