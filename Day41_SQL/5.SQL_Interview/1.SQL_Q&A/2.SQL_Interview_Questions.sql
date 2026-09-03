@@ -238,7 +238,11 @@ INNER JOIN employees e2 ON e1.manager_id = e2.id
 WHERE e2.salary > 100000;
 
 
-
+-- Q35. How would you get the rank of students based on their scores in descending order?
+-- Answer :
+SELECT student_name, score, 
+	DENSE_RANK() OVER(ORDER BY score DESC) as rank 
+FROM students;
 
 
 
