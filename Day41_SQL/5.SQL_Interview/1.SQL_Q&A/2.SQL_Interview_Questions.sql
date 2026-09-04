@@ -245,4 +245,17 @@ SELECT student_name, score,
 FROM students;
 
 
+-- Q36. Find the employees who earn more than the average salary in their respective departments.
+-- Answer :
+SELECT e1.id, e1.name, e1.salary, e1.department_id 
+FROM employees e1 
+JOIN (SELECT department_id, AVG(salary) AS avg_salary 
+      FROM employees 
+      GROUP BY department_id) e2 
+ON e1.department_id = e2.department_id 
+WHERE e1.salary > e2.avg_salary;
+
+
+
+
 
