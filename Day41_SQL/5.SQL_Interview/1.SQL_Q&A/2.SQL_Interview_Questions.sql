@@ -256,6 +256,11 @@ ON e1.department_id = e2.department_id
 WHERE e1.salary > e2.avg_salary;
 
 
-
+-- Q37. Retrieve all pairs of students who have the same scores.**
+-- Answer:
+SELECT a.student_name, b.student_name, a.score 
+FROM students a, students b 
+WHERE a.score = b.score 
+AND a.student_name != b.student_name;
 
 
