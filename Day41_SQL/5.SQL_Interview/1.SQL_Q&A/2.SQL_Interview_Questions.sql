@@ -272,6 +272,12 @@ WHERE date_column BETWEEN DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND CURDATE()
 AND DAYOFWEEK(date_column) NOT IN (1,7);
 
 
+-- Q39. Find the employees who have the same job roles in different departments.
+-- Answer :
+SELECT a.name, a.job_role, a.department_id, b.department_id 
+FROM employees a, employees b 
+WHERE a.job_role = b.job_role 
+AND a.department_id != b.department_id;
 
 
 
