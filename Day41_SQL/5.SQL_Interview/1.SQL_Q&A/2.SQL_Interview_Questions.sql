@@ -256,11 +256,29 @@ ON e1.department_id = e2.department_id
 WHERE e1.salary > e2.avg_salary;
 
 
--- Q37. Retrieve all pairs of students who have the same scores.**
+-- Q37. Retrieve all pairs of students who have the same scores.
 -- Answer:
 SELECT a.student_name, b.student_name, a.score 
 FROM students a, students b 
 WHERE a.score = b.score 
 AND a.student_name != b.student_name;
+
+
+-- Q38. Write a query to retrieve the last 7 days' records, excluding weekends.
+-- Answer :
+SELECT * 
+FROM table_name 
+WHERE date_column BETWEEN DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND CURDATE() 
+AND DAYOFWEEK(date_column) NOT IN (1,7);
+
+
+
+
+
+
+
+
+
+
 
 
