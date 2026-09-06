@@ -280,6 +280,13 @@ WHERE a.job_role = b.job_role
 AND a.department_id != b.department_id;
 
 
+-- Q40. Retrieve the total sales amount, but replace null values with zeros.
+-- Answer:
+SELECT COALESCE(SUM(sales_amount), 0) 
+FROM sales;
+
+
+
 
 
 
