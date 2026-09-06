@@ -286,6 +286,16 @@ SELECT COALESCE(SUM(sales_amount), 0)
 FROM sales;
 
 
+-- Q41. How would you retrieve the name and salary of the top 3 earning employees?**
+-- Answer :
+SELECT name, salary
+FROM (
+    SELECT name, salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
+    FROM employees
+) AS subquery
+WHERE rnk <= 3;
+
+
 
 
 
