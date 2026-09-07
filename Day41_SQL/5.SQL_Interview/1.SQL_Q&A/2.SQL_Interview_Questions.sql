@@ -318,6 +318,20 @@ AND (
 */
 
 
+-- Q43. Retrieve departments that have more employees than the average number of employees across all departments.
+-- Answer :
+SELECT department_id
+FROM employees
+GROUP BY department_id
+HAVING COUNT(id) > (
+    SELECT AVG(employee_count) 
+    FROM (
+        SELECT COUNT(id) as employee_count 
+        FROM employees 
+        GROUP BY department_id
+    ) AS subquery
+);
+
 
 
 
