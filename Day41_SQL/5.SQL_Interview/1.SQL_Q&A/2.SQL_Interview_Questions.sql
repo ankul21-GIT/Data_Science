@@ -297,6 +297,25 @@ WHERE rnk <= 3;
 
 
 
+-- Q42. Find employees who earn above the average salary of their department and their department's average salary is above the company's average.
+-- Answer :
+/*
+SELECT e.name, e.salary
+FROM employees e
+WHERE e.salary > (
+    SELECT AVG(salary) 
+    FROM employees 
+    WHERE department_id = e.department_id
+) 
+AND (
+    SELECT AVG(salary) 
+    FROM employees 
+    WHERE department_id = e.department_id
+) > (
+    SELECT AVG(salary) 
+    FROM employees
+);
+*/
 
 
 
