@@ -351,6 +351,18 @@ WHERE avg_salary < (
 );
 
 
+-- Q45. Retrieve the highest earning employee from each department.
+-- Answer :
+SELECT e.department_id, e.name, e.salary 
+FROM employees e 
+INNER JOIN (
+    SELECT department_id, MAX(salary) as max_salary 
+    FROM employees 
+    GROUP BY department_id
+) AS subquery 
+ON e.department_id = subquery.department_id 
+AND e.salary = subquery.max_salary;
+
 
 
 
