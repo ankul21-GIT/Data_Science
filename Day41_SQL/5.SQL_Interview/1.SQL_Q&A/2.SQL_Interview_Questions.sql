@@ -333,6 +333,22 @@ HAVING COUNT(id) > (
 );
 
 
+-- Q44. Find the second highest departmental average salary.
+-- Answer:
+SELECT MAX(avg_salary) 
+FROM (
+    SELECT department_id, AVG(salary) as avg_salary
+    FROM employees 
+    GROUP BY department_id
+) AS subquery
+WHERE avg_salary < (
+    SELECT MAX(avg_salary) 
+    FROM (
+        SELECT department_id, AVG(salary) as avg_salary 
+        FROM employees 
+        GROUP BY department_id
+    ) AS subquery2
+);
 
 
 
