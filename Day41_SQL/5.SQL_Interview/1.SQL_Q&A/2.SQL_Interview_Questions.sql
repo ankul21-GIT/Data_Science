@@ -364,5 +364,24 @@ ON e.department_id = subquery.department_id
 AND e.salary = subquery.max_salary;
 
 
+-- Q46. Which departments have the same average salary?**
+-- Answer :
+SELECT a.department_id AS dept1, b.department_id AS dept2, a.avg_salary
+FROM (
+    SELECT department_id, AVG(salary) as avg_salary 
+    FROM employees 
+    GROUP BY department_id
+) AS a
+JOIN (
+    SELECT department_id, AVG(salary) as avg_salary 
+    FROM employees 
+    GROUP BY department_id
+) AS b 
+ON a.avg_salary = b.avg_salary 
+AND a.department_id < b.department_id;
+
+
+
+
 
 
