@@ -381,6 +381,20 @@ ON a.avg_salary = b.avg_salary
 AND a.department_id < b.department_id;
 
 
+-- Q47. Find employees whose salary is above the median salary of the company.
+-- Answer :
+SELECT name, salary 
+FROM employees 
+WHERE salary > (
+    SELECT AVG(salary) 
+    FROM (
+        SELECT salary 
+        FROM employees 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees) MOD 2
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees)
+    ) AS subquery
+);
 
 
 
