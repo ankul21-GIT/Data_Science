@@ -397,5 +397,20 @@ WHERE salary > (
 );
 
 
+-- Q48. Retrieve the department names which have employees with salaries in the top 10% of all salaries.
+-- Answer :
+SELECT DISTINCT d.department_name
+FROM departments d
+JOIN employees e ON d.department_id = e.department_id
+WHERE e.salary > (
+    SELECT MIN(top_salary)
+    FROM (
+        SELECT salary as top_salary 
+        FROM employees 
+        ORDER BY salary DESC 
+        LIMIT (SELECT ROUND(COUNT(*) * 0.1) FROM employees)
+    ) AS inner_subquery
+);
+
 
 
