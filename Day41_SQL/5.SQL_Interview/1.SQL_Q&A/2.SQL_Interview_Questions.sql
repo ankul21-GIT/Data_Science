@@ -413,4 +413,33 @@ WHERE e.salary > (
 );
 
 
+-- Q49. Find the average salary of the departments which have more than five employees earning above the overall average salary.
+-- Answer :
+SELECT department_id, AVG(salary) 
+FROM employees 
+WHERE department_id IN (
+    SELECT department_id 
+    FROM employees 
+    WHERE salary > (SELECT AVG(salary) FROM employees)
+    GROUP BY department_id
+    HAVING COUNT(id) > 5
+)
+GROUP BY department_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
