@@ -439,6 +439,24 @@ AND e1.name = (
 );
 
 
+-- Q51. Determine if any department's average salary is higher than the maximum salary in another department.
+-- Answer :
+SELECT d1.department_id 
+FROM employees e1 
+JOIN departments d1 ON e1.department_id = d1.department_id
+WHERE (
+    SELECT AVG(e2.salary) 
+    FROM employees e2 
+    WHERE e2.department_id = d1.department_id
+) > (
+    SELECT MAX(e3.salary) 
+    FROM employees e3 
+    WHERE e3.department_id != d1.department_id
+)
+LIMIT 1;
+
+
+
 
 
 
