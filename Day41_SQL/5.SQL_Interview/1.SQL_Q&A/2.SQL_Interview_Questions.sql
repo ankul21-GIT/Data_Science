@@ -427,7 +427,16 @@ WHERE department_id IN (
 GROUP BY department_id;
 
 
-
+-- Q50. Retrieve employees who have the same name as their manager.**
+-- Answer :
+SELECT e1.name 
+FROM employees e1
+WHERE e1.manager_id IS NOT NULL 
+AND e1.name = (
+    SELECT e2.name 
+    FROM employees e2 
+    WHERE e2.id = e1.manager_id
+);
 
 
 
