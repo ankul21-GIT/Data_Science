@@ -456,8 +456,31 @@ WHERE (
 LIMIT 1;
 
 
-
-
+-- Q52. Find the employee who has the closest salary to the company's median salary but doesn't earn the median salary.
+-- Answer :
+SELECT id, name, salary 
+FROM employees 
+WHERE salary <> (
+    SELECT AVG(salary) 
+    FROM (
+        SELECT salary 
+        FROM employees 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees) MOD 2
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees)
+    ) AS median_subquery
+)
+ORDER BY ABS(salary - (
+    SELECT AVG(salary) 
+    FROM (
+        SELECT salary 
+        FROM employees 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees) MOD 2
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees)
+    ) AS median_subquery2
+))
+LIMIT 1;
 
 
 
