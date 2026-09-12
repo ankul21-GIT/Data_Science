@@ -483,6 +483,13 @@ ORDER BY ABS(salary - (
 LIMIT 1;
 
 
+-- Q53. Explain the difference between `CHAR` and `VARCHAR` data types?
+-- Answer :
+-- CHAR has a fixed length whereas VARCHAR has a variable length. CHAR always uses the same amount of storage space per entry, while VARCHAR uses only the space required plus a small overhead.
+
+
+
+
 
 
 
