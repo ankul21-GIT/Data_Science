@@ -12,3 +12,14 @@ HAVING SUM(salary) > (
     ) AS subquery
 );
 
+
+-- Q54. Find the employee with the third highest salary without using the LIMIT clause.
+-- Answer :
+SELECT name, salary 
+FROM employees e1 
+WHERE 2 = (
+    SELECT COUNT(DISTINCT e2.salary) 
+    FROM employees e2 
+    WHERE e2.salary > e1.salary
+);
+
