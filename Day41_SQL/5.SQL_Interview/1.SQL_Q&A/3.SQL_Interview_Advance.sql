@@ -23,3 +23,18 @@ WHERE 2 = (
     WHERE e2.salary > e1.salary
 );
 
+
+-- Q55. Identify departments that have less than the company-wide median number of employees.
+-- Answer :
+SELECT department_id 
+FROM employees 
+GROUP BY department_id
+HAVING COUNT(id) < (
+    SELECT AVG(employee_count) 
+    FROM (
+        SELECT department_id, COUNT(id) as employee_count 
+        FROM employees 
+        GROUP BY department_id
+    ) AS subquery
+);
+
