@@ -38,3 +38,22 @@ HAVING COUNT(id) < (
     ) AS subquery
 );
 
+
+-- Q56. Get the most common job title among employees who earn above the company average.
+-- Answer :
+SELECT job_title 
+FROM employees 
+WHERE salary > (SELECT AVG(salary) FROM employees)
+GROUP BY job_title 
+ORDER BY COUNT(*) DESC 
+LIMIT 1;
+
+
+
+
+
+
+
+
+
+
