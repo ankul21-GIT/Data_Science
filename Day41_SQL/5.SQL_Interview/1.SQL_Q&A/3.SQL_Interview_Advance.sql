@@ -49,11 +49,19 @@ ORDER BY COUNT(*) DESC
 LIMIT 1;
 
 
-
-
-
-
-
+-- Q57. Identify employees who earn more than the average salary in both their department and the company.
+-- Answer :
+SELECT id, name, salary 
+FROM employees e1 
+WHERE salary > (
+    SELECT AVG(salary) 
+    FROM employees 
+    WHERE department_id = e1.department_id
+) 
+AND salary > (
+    SELECT AVG(salary) 
+    FROM employees
+);
 
 
 
