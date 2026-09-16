@@ -88,6 +88,19 @@ HAVING salary_difference = (
 );
 
 
-
+-- Q60. Find the employee who earns the median salary in each department.**
+-- Answer :
+SELECT e1.department_id, e1.name, e1.salary 
+FROM employees e1
+WHERE (
+    SELECT COUNT(*) 
+    FROM employees e2 
+    WHERE e2.department_id = e1.department_id AND e2.salary <= e1.salary
+) = (
+    SELECT COUNT(*) 
+    FROM employees e3 
+    WHERE e3.department_id = e1.department_id AND e3.salary >= e1.salary
+);
+ 
 
 
