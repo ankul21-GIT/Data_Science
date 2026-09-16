@@ -73,7 +73,19 @@ ORDER BY SUM(amount) DESC
 LIMIT 1;
 
 
-
+-- Q59. Get the department that has the maximum difference between the highest and lowest salaries.
+-- Answer:
+SELECT department_id, (MAX(salary) - MIN(salary)) as salary_difference 
+FROM employees 
+GROUP BY department_id 
+HAVING salary_difference = (
+    SELECT MAX(max_salary - min_salary) 
+    FROM (
+        SELECT department_id, MAX(salary) as max_salary, MIN(salary) as min_salary 
+        FROM employees 
+        GROUP BY department_id
+    ) AS subquery
+);
 
 
 
