@@ -120,6 +120,22 @@ WHERE e1.salary > (
 );
 
 
+-- Q62. Identify the departments where the minimum salary is greater than the maximum salary of at least one other department.
+-- Answer :
+SELECT DISTINCT e1.department_id 
+FROM employees e1 
+WHERE e1.salary = (
+    SELECT MIN(salary) 
+    FROM employees 
+    WHERE department_id = e1.department_id
+) 
+AND e1.salary > ANY (
+    SELECT MAX(salary) 
+    FROM employees 
+    GROUP BY department_id
+);
+
+
 
 
 
