@@ -103,4 +103,36 @@ WHERE (
 );
  
 
+-- Q61. Retrieve employees who earn more than their respective department's median salary.
+-- Answer :
+SELECT e1.name, e1.salary, e1.department_id
+FROM employees e1
+WHERE e1.salary > (
+    SELECT AVG(salary) 
+    FROM (
+        SELECT salary 
+        FROM employees e2 
+        WHERE e2.department_id = e1.department_id 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees e3 WHERE e3.department_id = e1.department_id) MOD 2 
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees e4 WHERE e4.department_id = e1.department_id)
+    ) AS median_subquery
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
