@@ -136,6 +136,15 @@ AND e1.salary > ANY (
 );
 
 
+-- Q63. Find employees whose salary ranks in the top 3 within their department.
+-- Answer :
+SELECT e1.name, e1.salary, e1.department_id 
+FROM employees e1
+WHERE (
+    SELECT COUNT(DISTINCT e2.salary) 
+    FROM employees e2 
+    WHERE e2.department_id = e1.department_id AND e2.salary > e1.salary
+) < 3;
 
 
 
