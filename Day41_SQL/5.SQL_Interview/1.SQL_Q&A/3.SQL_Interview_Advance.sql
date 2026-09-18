@@ -147,6 +147,24 @@ WHERE (
 ) < 3;
 
 
+-- Q64. Identify the department with the most diverse salary distribution, i.e., the largest difference between the highest and lowest salaries.
+-- Answer:
+SELECT department_id 
+FROM employees 
+GROUP BY department_id 
+HAVING (MAX(salary) - MIN(salary)) = (
+    SELECT MAX(salary_range) 
+    FROM (
+        SELECT (MAX(salary) - MIN(salary)) as salary_range 
+        FROM employees 
+        GROUP BY department_id
+    ) AS subquery
+);
+
+
+
+
+
 
 
 
