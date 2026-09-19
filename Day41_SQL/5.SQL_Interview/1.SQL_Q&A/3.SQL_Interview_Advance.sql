@@ -162,6 +162,23 @@ HAVING (MAX(salary) - MIN(salary)) = (
 );
 
 
+-- Q65. Retrieve the employees who do not have the lowest salary in their department but earn less than the department average.
+-- Answer :
+SELECT e1.name, e1.salary, e1.department_id 
+FROM employees e1 
+WHERE e1.salary NOT IN (
+    SELECT MIN(e2.salary) 
+    FROM employees e2 
+    WHERE e2.department_id = e1.department_id
+) 
+AND e1.salary < (
+    SELECT AVG(e3.salary) 
+    FROM employees e3 
+    WHERE e3.department_id = e1.department_id
+);
+
+
+
 
 
 
