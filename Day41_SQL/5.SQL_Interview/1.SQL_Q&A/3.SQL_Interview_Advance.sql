@@ -178,6 +178,25 @@ AND e1.salary < (
 );
 
 
+-- Q66. Determine which departments have an average salary close to the company's median salary. Assume 'close' means a difference of less than 1000.
+-- Answer:
+SELECT department_id 
+FROM employees 
+GROUP BY department_id 
+HAVING ABS(AVG(salary) - (
+    SELECT AVG(median_salary) 
+    FROM (
+        SELECT salary AS median_salary 
+        FROM employees 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees) MOD 2 
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees)
+    ) AS median_subquery
+)) < 1000;
+
+
+
+
 
 
 
