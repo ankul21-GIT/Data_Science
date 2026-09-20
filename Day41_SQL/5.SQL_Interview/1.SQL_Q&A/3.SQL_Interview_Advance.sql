@@ -195,7 +195,19 @@ HAVING ABS(AVG(salary) - (
 )) < 1000;
 
 
-
+-- Q67. Find the departments where the total number of employees is above the company's average.
+-- Answer :
+SELECT department_id 
+FROM employees 
+GROUP BY department_id 
+HAVING COUNT(id) > (
+    SELECT AVG(employee_count) 
+    FROM (
+        SELECT COUNT(id) AS employee_count 
+        FROM employees 
+        GROUP BY department_id
+    ) AS avg_subquery
+);
 
 
 
