@@ -210,6 +210,20 @@ HAVING COUNT(id) > (
 );
 
 
+-- Q68. Identify employees who earn more than the second highest earner in their respective department.
+-- Answer :
+SELECT e1.name, e1.salary, e1.department_id 
+FROM employees e1 
+WHERE e1.salary > (
+    SELECT MAX(e2.salary) 
+    FROM employees e2 
+    WHERE e2.department_id = e1.department_id AND e2.salary < (
+        SELECT MAX(e3.salary) 
+        FROM employees e3 
+        WHERE e3.department_id = e1.department_id
+    )
+);
+
 
 
 
