@@ -225,6 +225,16 @@ WHERE e1.salary > (
 );
 
 
+-- Q69. Find the departments where the top earner makes at least twice as much as the second top earner.
+-- Answer :
+SELECT department_id 
+FROM employees 
+GROUP BY department_id 
+HAVING MAX(salary) >= 2 * (
+    SELECT MAX(salary) 
+    FROM employees e2 
+    WHERE e2.department_id = employees.department_id AND salary < MAX(employees.salary)
+);
 
 
 
