@@ -237,7 +237,19 @@ HAVING MAX(salary) >= 2 * (
 );
 
 
-
+-- Q70. Retrieve the employees who have been in the company for longer than the average tenure of their respective department managers.
+-- Answer :
+SELECT e1.name, e1.join_date 
+FROM employees e1 
+WHERE DATEDIFF(CURDATE(), e1.join_date) > (
+    SELECT AVG(DATEDIFF(CURDATE(), e2.join_date)) 
+    FROM employees e2 
+    WHERE e2.id IN (
+        SELECT manager_id 
+        FROM employees 
+        WHERE department_id = e1.department_id
+    )
+);
 
 
 
