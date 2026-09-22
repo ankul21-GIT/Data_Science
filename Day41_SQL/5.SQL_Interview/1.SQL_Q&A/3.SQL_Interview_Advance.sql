@@ -267,7 +267,15 @@ HAVING (AVG(salary) - MIN(salary)) = (
 );
 
 
-
+-- Q72. Identify the employees who earn below the average salary of their peers who joined in the same year.**
+-- Answer :
+SELECT e1.name, e1.salary, YEAR(e1.join_date) AS join_year 
+FROM employees e1 
+WHERE e1.salary < (
+    SELECT AVG(e2.salary) 
+    FROM employees e2 
+    WHERE YEAR(e2.join_date) = YEAR(e1.join_date)
+);
 
 
 
