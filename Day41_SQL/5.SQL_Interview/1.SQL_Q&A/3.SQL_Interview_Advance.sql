@@ -278,6 +278,37 @@ WHERE e1.salary < (
 );
 
 
+-- Q73. Retrieve the employee who has the closest salary to their department's median but isn't the median earner.
+-- Answer :
+SELECT e1.name, e1.salary 
+FROM employees e1 
+WHERE e1.department_id IN (
+    SELECT department_id 
+    FROM employees
+) 
+AND e1.salary <> (
+    SELECT AVG(median_salary) 
+    FROM (
+        SELECT salary AS median_salary 
+        FROM employees e2 
+        WHERE e2.department_id = e1.department_id 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees e3 WHERE e3.department_id = e1.department_id) MOD 2 
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees e4 WHERE e4.department_id = e1.department_id)
+    ) AS median_subquery
+)
+ORDER BY ABS(e1.salary - (
+    SELECT AVG(median_salary) 
+    FROM (
+        SELECT salary AS median_salary 
+        FROM employees e5 
+        WHERE e5.department_id = e1.department_id 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees e6 WHERE e6.department_id = e1.department_id) MOD 2 
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees e7 WHERE e7.department_id = e1.department_id)
+    ) AS median_subquery2
+))
+LIMIT 1;
 
 
 
