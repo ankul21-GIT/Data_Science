@@ -252,6 +252,19 @@ WHERE DATEDIFF(CURDATE(), e1.join_date) > (
 );
 
 
+-- Q71. Identify the department with the smallest gap between the lowest and average salary.
+-- Answer :
+SELECT department_id 
+FROM employees 
+GROUP BY department_id 
+HAVING (AVG(salary) - MIN(salary)) = (
+    SELECT MIN(gap) 
+    FROM (
+        SELECT (AVG(salary) - MIN(salary)) AS gap 
+        FROM employees 
+        GROUP BY department_id
+    ) AS gap_subquery
+);
 
 
 
