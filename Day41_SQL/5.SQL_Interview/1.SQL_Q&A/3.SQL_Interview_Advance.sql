@@ -311,6 +311,15 @@ ORDER BY ABS(e1.salary - (
 LIMIT 1;
 
 
+-- Q74. Determine the departments whose average tenure (time since joining) is greater than the company average.
+-- Answer :
+SELECT department_id 
+FROM employees 
+GROUP BY department_id 
+HAVING AVG(DATEDIFF(CURDATE(), join_date)) > (
+    SELECT AVG(DATEDIFF(CURDATE(), join_date)) 
+    FROM employees
+);
 
 
 
