@@ -322,5 +322,27 @@ HAVING AVG(DATEDIFF(CURDATE(), join_date)) > (
 );
 
 
+-- Q75. Identify departments where more than half of the employees earn above the company's median salary.
+-- Answer :
+SELECT e1.department_id 
+FROM employees e1 
+WHERE e1.salary > (
+    SELECT AVG(median_salary) 
+    FROM (
+        SELECT salary AS median_salary 
+        FROM employees 
+        ORDER BY salary 
+        LIMIT 2 - (SELECT COUNT(*) FROM employees) MOD 2 
+        OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees)
+    ) AS median_subquery
+)
+GROUP BY e1.department_id 
+HAVING COUNT(e1.id) > 0.5 * (
+    SELECT COUNT(*) 
+    FROM employees e2 
+    WHERE e2.department_id = e1.department_id
+);
+
+
 
 
