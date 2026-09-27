@@ -344,5 +344,19 @@ HAVING COUNT(e1.id) > 0.5 * (
 );
 
 
-
+-- Q76. Find employees who earn a salary in the top 3 of their department but are not in the top 10 company-wide.**
+-- Answer :
+SELECT e1.name, e1.salary, e1.department_id 
+FROM employees e1 
+WHERE (
+    SELECT COUNT(DISTINCT e2.salary) 
+    FROM employees e2 
+    WHERE e2.department_id = e1.department_id AND e2.salary > e1.salary
+) < 3 
+AND e1.salary NOT IN (
+    SELECT DISTINCT salary 
+    FROM employees 
+    ORDER BY salary DESC 
+    LIMIT 10
+);
 
