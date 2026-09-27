@@ -344,7 +344,7 @@ HAVING COUNT(e1.id) > 0.5 * (
 );
 
 
--- Q76. Find employees who earn a salary in the top 3 of their department but are not in the top 10 company-wide.**
+-- Q76. Find employees who earn a salary in the top 3 of their department but are not in the top 10 company-wide.
 -- Answer :
 SELECT e1.name, e1.salary, e1.department_id 
 FROM employees e1 
@@ -358,5 +358,21 @@ AND e1.salary NOT IN (
     FROM employees 
     ORDER BY salary DESC 
     LIMIT 10
+);
+
+
+-- Q77. Identify employees whose salary is above the average salary of the two departments with the highest average salaries.
+-- Answer :
+SELECT e1.name, e1.salary 
+FROM employees e1 
+WHERE e1.salary > (
+    SELECT AVG(department_avg) 
+    FROM (
+        SELECT department_id, AVG(salary) AS department_avg 
+        FROM employees 
+        GROUP BY department_id 
+        ORDER BY department_avg DESC 
+        LIMIT 2
+    ) AS top_department_subquery
 );
 
