@@ -389,4 +389,23 @@ WHERE e2.salary < (
 );
 
 
+-- Q79. Identify the department with the least difference between the top earner and the average salary of the department.
+-- Answer :
+SELECT department_id 
+FROM employees 
+GROUP BY department_id 
+HAVING (MAX(salary) - AVG(salary)) = (
+    SELECT MIN(top_minus_avg) 
+    FROM (
+        SELECT (MAX(salary) - AVG(salary)) AS top_minus_avg 
+        FROM employees 
+        GROUP BY department_id
+    ) AS difference_subquery
+);
+
+
+
+
+
+
 
