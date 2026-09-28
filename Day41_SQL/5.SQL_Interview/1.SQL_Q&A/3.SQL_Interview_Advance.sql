@@ -376,3 +376,17 @@ WHERE e1.salary > (
     ) AS top_department_subquery
 );
 
+
+-- Q78. Find employees who have a manager earning less than the lowest salary in their department.**
+-- Answer :
+SELECT e1.name, e1.salary 
+FROM employees e1 
+JOIN employees e2 ON e1.manager_id = e2.id 
+WHERE e2.salary < (
+    SELECT MIN(e3.salary) 
+    FROM employees e3 
+    WHERE e3.department_id = e1.department_id
+);
+
+
+
