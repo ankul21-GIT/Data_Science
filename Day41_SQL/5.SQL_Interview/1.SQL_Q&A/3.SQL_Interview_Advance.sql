@@ -404,7 +404,19 @@ HAVING (MAX(salary) - AVG(salary)) = (
 );
 
 
-
+-- Q80. Retrieve the employees who have the same rank (in terms of salary) in their department as they do in the company overall.
+-- Answer :
+SELECT e1.name, e1.salary 
+FROM employees e1 
+WHERE (
+    SELECT COUNT(DISTINCT e2.salary) 
+    FROM employees e2 
+    WHERE e2.department_id = e1.department_id AND e2.salary > e1.salary
+) = (
+    SELECT COUNT(DISTINCT e3.salary) 
+    FROM employees e3 
+    WHERE e3.salary > e1.salary
+);
 
 
 
