@@ -419,5 +419,29 @@ WHERE (
 );
 
 
+-- Q81. Determine the departments where the third-highest earner makes more than double the department's average salary.**
+-- Answer :
+SELECT department_id 
+FROM employees e1 
+WHERE (
+    SELECT DISTINCT salary 
+    FROM (
+        SELECT salary 
+        FROM employees e2 
+        WHERE e2.department_id = e1.department_id 
+        ORDER BY e2.salary DESC 
+        LIMIT 3
+    ) AS third_top_salary_subquery 
+    ORDER BY salary 
+    LIMIT 1 OFFSET 2
+) > 2 * (
+    SELECT AVG(e3.salary) 
+    FROM employees e3 
+    WHERE e3.department_id = e1.department_id
+)
+GROUP BY department_id;
+
+
+
 
 
