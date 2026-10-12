@@ -419,7 +419,7 @@ WHERE (
 );
 
 
--- Q81. Determine the departments where the third-highest earner makes more than double the department's average salary.**
+-- Q81. Determine the departments where the third-highest earner makes more than double the department's average salary.
 -- Answer :
 SELECT department_id 
 FROM employees e1 
@@ -442,6 +442,19 @@ WHERE (
 GROUP BY department_id;
 
 
+-- QQ82. Find employees who have more direct reports (subordinates) than their manager.
+-- Answer :
+SELECT e1.name 
+FROM employees e1 
+WHERE (
+    SELECT COUNT(*) 
+    FROM employees e2 
+    WHERE e2.manager_id = e1.id
+) > (
+    SELECT COUNT(*) 
+    FROM employees e3 
+    WHERE e3.manager_id = e1.manager_id
+);
 
 
 
