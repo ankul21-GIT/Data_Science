@@ -457,4 +457,12 @@ WHERE (
 );
 
 
+-- Q83. Retrieve the month (in numbers) with the highest total sales from a table of daily sales.
+-- Answer :
+SELECT MONTH(date) as sales_month 
+FROM sales 
+GROUP BY MONTH(date) 
+ORDER BY SUM(amount) DESC 
+LIMIT 1;
+
 
